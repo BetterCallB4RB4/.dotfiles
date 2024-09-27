@@ -30,6 +30,8 @@
     pkgs.terraform
     pkgs.awscli2
     pkgs.fzf 
+    pkgs.k9s
+    pkgs.tmux
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
