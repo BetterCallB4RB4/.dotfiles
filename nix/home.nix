@@ -45,6 +45,7 @@
     pkgs.zig
     pkgs.cargo
     pkgs.nodejs_22
+    pkgs.unzip
   ];
 
   nix = {
