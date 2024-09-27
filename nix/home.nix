@@ -51,6 +51,11 @@
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
+ 
+  programs.shells = ["${pkgs.zsh}"];
+  programs.zsh = {
+    enable = true;
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
