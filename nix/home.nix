@@ -32,6 +32,17 @@
     pkgs.fzf 
     pkgs.k9s
     pkgs.tmux
+    pkgs.clang-tools
+    pkgs.cmake
+    pkgs.codespell
+    pkgs.conan
+    pkgs.cppcheck
+    pkgs.doxygen
+    pkgs.gtest
+    pkgs.lcov
+    pkgs.vcpkg
+    pkgs.vcpkg-tool
+    pkgs.zig
   ];
 
   nix = {
