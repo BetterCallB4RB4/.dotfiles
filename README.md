@@ -39,6 +39,13 @@ you can enable nix-command and flakes on a per command bases with
 --extra-experimental-features "nix-command flakes"
 ```
 
+install home manager from official distribution (https://nix-community.github.io/home-manager/) 
+```bash
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+```
+
 load home manager configuration
 ```bash
 home-manager switch --flake ~/dotfiles2/nix#zen-nix
