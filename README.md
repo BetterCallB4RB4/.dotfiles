@@ -32,6 +32,7 @@ enabling nix-command and flakes
 ```bash
 echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf
 sudo systemctl restart nix-daemon.service
+cat /etc/nix/nix.conf
 ```
 
 you can enable nix-command and flakes on a per command bases with 
@@ -46,7 +47,7 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 ```
 
-load home manager configuration
+load home manager configuration (impure to let nix access env var)
 ```bash
-home-manager switch --flake ~/dotfiles2/nix#zen-nix
+home-manager switch --flake ~/dotfiles2/nix#zen-nix --impure
 ```
