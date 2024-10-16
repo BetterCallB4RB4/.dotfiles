@@ -36,6 +36,33 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     pkgs.neofetch
+    pkgs.starship
+    pkgs.stow
+    pkgs.neovim
+    pkgs.zsh
+    pkgs.tmux
+    pkgs.git
+    pkgs.kubectl
+    pkgs.kubernetes-helm
+    pkgs.terraform
+    pkgs.awscli2
+    pkgs.fzf 
+    pkgs.k9s
+    pkgs.tmux
+    pkgs.clang-tools
+    pkgs.cmake
+    pkgs.codespell
+    pkgs.conan
+    pkgs.cppcheck
+    pkgs.doxygen
+    pkgs.gtest
+    pkgs.lcov
+    pkgs.vcpkg
+    pkgs.vcpkg-tool
+    pkgs.zig
+    pkgs.cargo
+    pkgs.nodejs_22
+    pkgs.unzip
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -53,6 +80,11 @@
     # '';
   };
 
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+  
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
