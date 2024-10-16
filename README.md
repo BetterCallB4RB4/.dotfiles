@@ -1,22 +1,22 @@
-# dotfiles
+# My Nix Configuration
 
-install git 
-install stow 
-clone this repo in your home directory
-run command "stow ."
+Welcome to my Nix configuration repository! This repository contains my personal Nix configurations, managed using [Home Manager](https://github.com/nix-community/home-manager) and the [Nix package manager](https://nixos.org/nix/).
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Installation](#installation)
+- [Customization](#customization)
+- [Usage](#usage)
 
 
-https://nixos.org/download/
-https://github.com/DeterminateSystems/nix-installer
-https://nix-community.github.io/home-manager/index.xhtml#ch-introduction
-https://search.nixos.org/packages?channel=24.05&show=tmux&from=0&size=50&sort=relevance&type=packages&query=tmux
-https://nixos.wiki/wiki/Flakes
-https://www.youtube.com/watch?v=hLxyENmWZSQ&t=16s
+## Overview
 
-sh <(curl -L https://nixos.org/nix/install) --no-daemon
-export NIXPKGS_ALLOW_UNFREE=1
-nix shell nixpkgs#home-manager --extra-experimental-features "nix-command flakes" --impure
-home-manager switch --flake .#dimi --extra-experimental-features "nix-command flakes" --impure
+This repository serves as a comprehensive setup for managing my development environment and personal configurations using Nix. The configurations are declarative and can be easily reproduced across different systems.
+
+## Installation
+
+To install Nix and set up this configuration, follow these steps:
 
 installing nix ( https://nixos.org/download/ )
 ```bash
@@ -40,7 +40,7 @@ you can enable nix-command and flakes on a per command bases with
 --extra-experimental-features "nix-command flakes"
 ```
 
-install home manager from official distribution (https://nix-community.github.io/home-manager/) 
+install home manager from official distribution
 ```bash
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
 nix-channel --update
@@ -52,7 +52,22 @@ load home manager configuration (impure to let nix access env var)
 home-manager switch --flake ~/dotfiles2/nix#zen-nix --impure
 ```
 
+## Customization
+
 test 1 command setup
 ```bash
-nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/dotfiles2/nix#zen-nix --impure"
+nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
+```
+
+## Usage
+
+update the home.nix for user space pkgs from the nix repository or add flake to the flake.nix to add a complete module<br>
+run this command to let home-manager rebuild the configuration
+```bash
+home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features "nix-command flakes" --impure
+```
+
+for practical use you can alias this command in out shellrc
+```bash
+alias nix-build="home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
 ```
