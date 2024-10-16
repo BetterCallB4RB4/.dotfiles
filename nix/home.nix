@@ -18,44 +18,23 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    pkgs.neofetch
-    pkgs.starship
-    pkgs.stow
-    pkgs.neovim
-    pkgs.zsh
-    pkgs.tmux
-    pkgs.git
-    pkgs.kubectl
-    pkgs.kubernetes-helm
-    pkgs.terraform
-    pkgs.awscli2
-    pkgs.fzf 
-    pkgs.k9s
-    pkgs.tmux
-    pkgs.clang-tools
-    pkgs.cmake
-    pkgs.codespell
-    pkgs.conan
-    pkgs.cppcheck
-    pkgs.doxygen
-    pkgs.gtest
-    pkgs.lcov
-    pkgs.vcpkg-tool
-    pkgs.zig
-    pkgs.cargo
-    pkgs.nodejs_22
-    pkgs.unzip
-  ];
+    # # Adds the 'hello' command to your environment. It prints a friendly
+    # # "Hello, world!" when run.
+    # pkgs.hello
 
-  nix = {
-    package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
-  };
- 
-  programs.shells = ["${pkgs.zsh}"];
-  programs.zsh = {
-    enable = true;
-  };
+    # # It is sometimes useful to fine-tune packages, for example, by applying
+    # # overrides. You can do that directly here, just don't forget the
+    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
+    # # fonts?
+    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+
+    # # You can also create simple shell scripts directly inside your
+    # # configuration. For example, this adds a command 'my-hello' to your
+    # # environment:
+    # (pkgs.writeShellScriptBin "my-hello" ''
+    #   echo "Hello, ${config.home.username}!"
+    # '')
+  ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
