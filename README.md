@@ -57,6 +57,8 @@ git clone https://github.com/BetterCallB4RB4/.dotfiles.git
 Environment setup for pkgs
 ```bash
 nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/.dotfiles/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
+nix-shell -p home-manager --run "home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
+
 ```
 
 run stow insisde the dotfiles repository
