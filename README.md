@@ -51,3 +51,8 @@ load home manager configuration (impure to let nix access env var)
 ```bash
 home-manager switch --flake ~/dotfiles2/nix#zen-nix --impure
 ```
+
+test 1 command setup
+```bash
+nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/dotfiles2/nix#zen-nix --impure"
+```
