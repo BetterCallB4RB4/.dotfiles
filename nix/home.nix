@@ -57,8 +57,6 @@
     pkgs.doxygen
     pkgs.gtest
     pkgs.lcov
-    pkgs.vcpkg
-    pkgs.vcpkg-tool
     pkgs.zig
     pkgs.cargo
     pkgs.nodejs_22
