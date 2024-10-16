@@ -44,7 +44,7 @@
     pkgs.git
     pkgs.kubectl
     pkgs.kubernetes-helm
-    pkgs.terraform
+    #pkgs.terraform
     pkgs.awscli2
     pkgs.fzf 
     pkgs.k9s
