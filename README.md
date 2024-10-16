@@ -17,3 +17,29 @@ sh <(curl -L https://nixos.org/nix/install) --no-daemon
 export NIXPKGS_ALLOW_UNFREE=1
 nix shell nixpkgs#home-manager --extra-experimental-features "nix-command flakes" --impure
 home-manager switch --flake .#dimi --extra-experimental-features "nix-command flakes" --impure
+
+installing nix ( https://nixos.org/download/ )
+```bash
+  sh <(curl -L https://nixos.org/nix/install) --daemon
+```
+
+check nix installation
+```bash
+  nix-shell -p neofetch --run neofetch
+```
+
+enabling nix-command and flakes 
+```bash
+  echo "experimental-features = nix-command flakes" >> /etc/nix/nix.conf
+  sudo systemctl restart nix-daemon.service
+```
+
+you can enable nix-command and flakes on a per command bases with 
+```bash
+  --extra-experimental-features "nix-command flakes"
+```
+
+load home manager configuration
+```bash
+  home-manager switch --flake ~/dotfiles2/nix#zen-nix
+```
