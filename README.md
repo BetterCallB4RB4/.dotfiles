@@ -47,16 +47,21 @@ nix-channel --update
 nix-shell '<home-manager>' -A install
 ```
 
-load home manager configuration (impure to let nix access env var)
-```bash
-home-manager switch --flake ~/dotfiles2/nix#zen-nix --impure
-```
-
 ## Customization
 
-test 1 command setup
+clone the repository to get the configuration in your home folder (git have to be already installed)
+```bash
+git clone https://github.com/BetterCallB4RB4/dotfiles2.git
+```
+
+Environment setup for pkgs
 ```bash
 nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
+```
+
+run stow insisde the dotfiles repository
+```bash
+stow .
 ```
 
 ## Usage
