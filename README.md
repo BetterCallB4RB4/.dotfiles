@@ -51,12 +51,12 @@ nix-shell '<home-manager>' -A install
 
 clone the repository to get the configuration in your home folder (git have to be already installed)
 ```bash
-git clone https://github.com/BetterCallB4RB4/dotfiles2.git
+git clone https://github.com/BetterCallB4RB4/.dotfiles.git
 ```
 
 Environment setup for pkgs
 ```bash
-nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
+nix shell nixpkgs#home-manager --command sh -c "home-manager switch --flake ~/.dotfiles/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
 ```
 
 run stow insisde the dotfiles repository
@@ -69,10 +69,10 @@ stow .
 update the home.nix for user space pkgs from the nix repository or add flake to the flake.nix to add a complete module<br>
 run this command to let home-manager rebuild the configuration
 ```bash
-home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features "nix-command flakes" --impure
+home-manager switch --flake ~/.dotfiles/nix#zen-nix --extra-experimental-features "nix-command flakes" --impure
 ```
 
 for practical use you can alias this command in out shellrc
 ```bash
-alias nix-build="home-manager switch --flake ~/dotfiles2/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
+alias nix-build="home-manager switch --flake ~/.dotfiles/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
 ```
