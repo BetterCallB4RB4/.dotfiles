@@ -74,29 +74,6 @@ alias egrep='egrep --color=auto'
 alias daddy='sudo'
 alias python='python3'
 
-# custom alias
-#alias getSunny='unset AWS_PROFILE && unset KUBECONFIG'
-#alias winShare='/home/jd4augbarbad/scripts/windowsShare.sh'
-#if [ -f "$HOME/.aws_alias" ]; then
-#    source "$HOME/.aws_alias"
-#fi
-
-
-#AWS WORK
-#alias aws-login='export AWS_PROFILE=shared-agile-int && echo "DEFAULT LOGIN IN AGILE SHARED ACCOUNT" && aws sso login'
-#alias updateAWSconfig="${HOME}/scripts/updateAWSconfig.sh" 
-#alias genKube="source ${HOME}/scripts/generateKubeconfig.sh ${AWS_PROFILE}"
-
-
-# custom variable
-#export HTTP_PROXY="http://ipv4.212.7.64.11.hybrid-web.global.blackspider.com:8006"
-#export HTTPS_PROXY="http://ipv4.212.7.64.11.hybrid-web.global.blackspider.com:8006"
-#export NO_PROXY="127.0.0.1, localhost, .crifnet.com"
-
-#remove windows path from the bin path variable
-#export PATH="/home/jd4augbarbad/.asdf/shims:/home/jd4augbarbad/.asdf/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib"
-
-
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
@@ -110,6 +87,3 @@ eval "$(fzf --zsh)"
 
 #load starship prompt
 eval "$(starship init zsh)"
-
-# must be last configuration
-#. "$HOME/.asdf/asdf.sh"
