@@ -1,23 +1,23 @@
 format = """
-[¯éÂ](#565f89)\
+[](#565f89)\
 $username\
-[¯é░](bg:#414868 fg:#565f89)\
+[](bg:#414868 fg:#565f89)\
 $directory\
-[¯é░](fg:#414868 bg:#7dcfff)\
+[](fg:#414868 bg:#7dcfff)\
 $git_branch\
 $git_status\
-[¯é░](fg:#7dcfff bg:#b4f9f8)\
-[¯é░](fg:#b4f9f8 bg:#ff9e64)\
-[¯é░](fg:#ff9e64 bg:#f7768e)\
+[](fg:#7dcfff bg:#b4f9f8)\
+[](fg:#b4f9f8 bg:#ff9e64)\
+[](fg:#ff9e64 bg:#f7768e)\
 $time\
-[¯é░](fg:#f7768e)\
+[](fg:#f7768e)\
 \n$character\n"""
 
 command_timeout = 5000
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
-# You can also replace your username with a neat symbol like ´äá to save some space
+# You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
 style_user = "bg:#565f89"
@@ -28,10 +28,10 @@ format = '[$user ]($style)'
 style = "bg:#414868"
 format = "[ $path ]($style)"
 truncation_length = 3
-truncation_symbol = "ÔÇª/"
+truncation_symbol = "…/"
 
 [git_branch]
-symbol = "´äô"
+symbol = ""
 style = "fg:#414868 bg:#7dcfff"
 format = '[ $symbol $branch ]($style)'
 
