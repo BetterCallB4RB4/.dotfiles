@@ -71,10 +71,7 @@ stow .
 ```
 
 open the program tracked in the dotfile and let them load the configuration<br>
-if the tmux doesn't load automatically force the configuration reload
-```bash
-ctr-space + I
-```
+if the tmux doesn't load automatically force the configuration reload <special> + I inside a tmux session, neovim should load init.lua automatically
 
 ## Installation of nix
 
