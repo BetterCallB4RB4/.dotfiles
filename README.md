@@ -12,7 +12,35 @@ Welcome to my Nix configuration repository! This repository contains my personal
 ## Overview
 
 This repository serves as a comprehensive setup for managing my development environment and personal configurations using Nix. The configurations are declarative and can be easily reproduced across different systems.
-for the moment this flow has only been tested on a single WSL instance
+for the moment this flow has only been tested on a single WSL instance, for this reason the terminal configuration must be managed separately<br>
+### Windows Terminal ColorSkin Tokyo Night
+```json
+{
+    "background": "#1A1B26",
+    "black": "#15161E",
+    "blue": "#7AA2F7",
+    "brightBlack": "#414868",
+    "brightBlue": "#7AA2F7",
+    "brightCyan": "#7DCFFF",
+    "brightGreen": "#9ECE6A",
+    "brightPurple": "#BB9AF7",
+    "brightRed": "#F7768E",
+    "brightWhite": "#C0CAF5",
+    "brightYellow": "#E0AF68",
+    "cursorColor": "#FFFFFF",
+    "cyan": "#7DCFFF",
+    "foreground": "#C0CAF5",
+    "green": "#9ECE6A",
+    "name": "Tokyo Night",
+    "purple": "#BB9AF7",
+    "red": "#F7768E",
+    "selectionBackground": "#FFFFFF",
+    "white": "#A9B1D6",
+    "yellow": "#E0AF68"
+},
+```
+
+### Need nerdfont installed on the Host machine 
 
 ## Customization
 
