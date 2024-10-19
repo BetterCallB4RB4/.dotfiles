@@ -64,6 +64,12 @@ Environment setup for pkgs
 nix-shell -p home-manager --run "home-manager switch --flake ~/.dotfiles/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
 ```
 
+setup zsh as default shell 
+```
+command -v zsh | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+```
+
 run stow insisde the dotfiles repository
 ```bash
 stow .
