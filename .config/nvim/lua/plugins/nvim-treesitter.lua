@@ -5,15 +5,10 @@ return {
 		opts = {
 			ensure_installed = {
 				"bash",
-				"c",
-				"html",
 				"lua",
 				"luadoc",
 				"markdown",
 				"vim",
-				"vimdoc",
-				"terraform",
-				"groovy",
 			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
@@ -28,24 +23,8 @@ return {
 		},
 		config = function(_, opts)
 			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
-
 			---@diagnostic disable-next-line: missing-fields
 			require("nvim-treesitter.configs").setup(opts)
-			vim.cmd([[
-          augroup filetypedetect
-            autocmd BufRead,BufNewFile Jenkins* set filetype=groovy
-            autocmd BufRead,BufNewFile Jenkinsfile.* set filetype=groovy
-            autocmd BufRead,BufNewFile *.jenkinsfile set filetype=groovy
-            autocmd BufRead,BufNewFile *.Jenkinsfile set filetype=groovy
-          augroup END
-        ]])
-
-			vim.cmd([[
-          augroup filetypedetect
-            autocmd BufRead,BufNewFile *.tfvars set filetype=terraform 
-            autocmd BufRead,BufNewFile *.tf set filetype=terraform 
-          augroup END
-        ]])
 		end,
 	},
 }
