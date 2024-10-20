@@ -61,6 +61,7 @@
     pkgs.cargo
     pkgs.nodejs_22
     pkgs.unzip
+    pkgs.ripgrep
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
