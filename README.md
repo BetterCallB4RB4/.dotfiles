@@ -1,13 +1,30 @@
-# My Nix Configuration
+# A development environment to look like you know IT
+
+- [Introduction](#introduction)
+- [Overview](#overview)
+- [Customization](#customization)
+- [Installation of nix](#installation)
+- [Usage](#usage)
+
+# Introduction
+
+this repository contains my Work in progress to be able to make my developer environment declarative so that I can have the same environment on multiple different machines. The idea is to be able to reproduce the same environment between Windows WSL, NixOS and other Linux distributions.<br>
+
+The idea is to manage through Nix as a package manager so that I can have home managers on multiple systems by relying on nix pkg manager.
+I want to manage the management of packages and development tools with modules that can be managed by home manager.
+I want to track the configuration files separately and manage them through stow.<br>
+
+The idea is that if I were to have a system where I can't install nix I can still bring my configuration files with me and have my configurations available with a little manual work<br>
+
+For the moment this configuration has been created and tested only on WSL so the prerequisites and the guide are written documented the process for installing on a WSL Ubuntu<br>
+
+
+
 
 Welcome to my Nix configuration repository! This repository contains my personal Nix configurations, managed using [Home Manager](https://github.com/nix-community/home-manager) and the [Nix package manager](https://nixos.org/nix/).
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Customization](#customization)
-- [Installation of nix](#installation)
-- [Usage](#usage)
 
 ## Overview
 
