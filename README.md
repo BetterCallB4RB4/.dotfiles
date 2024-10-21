@@ -2,9 +2,7 @@
 
 - [Introduction](#introduction)
 - [Installation prerequisites](#installation-prerequisites)
-- [Overview](#overview)
 - [Customization](#customization)
-- [Installation of nix](#installation)
 - [Usage](#usage)
 
 # Introduction
@@ -66,15 +64,14 @@ since it is not default I leave the one I generated below.
 Add the font and coloscheme to the windows terminal configuration by editing the Settings.json file
 ```%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json```
 
-###Nix pkg manager 
+### Nix pkg manager
 Nix is a powerful, purely functional package manager that allows users to build and manage software in a reproducible and declarative way. Unlike traditional package managers, Nix builds packages in isolated environments, ensuring that builds are deterministic and don't interfere with each other. This is achieved through its unique approach of using hash-based paths, making package dependencies explicit and avoiding version conflicts. Nix stores everything in a central store, allowing for atomic upgrades, rollbacks, and parallel installations. It was created by Eelco Dolstra during his PhD research to address the challenges of software deployment and reproducibility. Nix is used across various operating systems, making it highly versatile and portable, and its robust ecosystem includes Nixpkgs, a collection of thousands of packages that can be easily managed. With its declarative model, Nix simplifies the complexity of software management, allowing for reliable, user-friendly, and reproducible environments.<br>
 
-Since this configuration is designed to run on multiple systems I thought of using home manager (installed as flake) to manage the system. <br> 
+Since this configuration is designed to run on multiple systems I thought of using home manager (installed as flake) to manage the system [Home Manager](https://github.com/nix-community/home-manager) and the [Nix package manager](https://nixos.org/nix/).<br> 
 
 Below I also insert the process of the first configuration of nix for personal memory (I'm still studying nix and how to use it at its best) <br>
 
-## TEMP
-Welcome to my Nix configuration repository! This repository contains my personal Nix configurations, managed using [Home Manager](https://github.com/nix-community/home-manager) and the [Nix package manager](https://nixos.org/nix/).
+Welcome to my Nix configuration repository! This repository contains my personal Nix configurations, 
 This repository serves as a comprehensive setup for managing my development environment and personal configurations using Nix. The configurations are declarative and can be easily reproduced across different systems.
 for the moment this flow has only been tested on a single WSL instance, for this reason the terminal configuration must be managed separately<br>
 
