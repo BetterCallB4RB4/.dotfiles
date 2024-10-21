@@ -1,6 +1,7 @@
 # A development environment to look like you know IT
 
 - [Introduction](#introduction)
+- [Installation prerequisites](#installation-prerequisites)
 - [Overview](#overview)
 - [Customization](#customization)
 - [Installation of nix](#installation)
@@ -18,18 +19,23 @@ The idea is that if I were to have a system where I can't install nix I can stil
 
 For the moment this configuration has been created and tested only on WSL so the prerequisites and the guide are written documented the process for installing on a WSL Ubuntu<br>
 
+# Installation prerequisites
 
+##WSL
 
+installing a WSL instance ubuntu ```https://learn.microsoft.com/en-us/windows/wsl/install```
+install a Linux distru (Ubuntu by default) with
+```bash
+wsl --install
+```
 
-Welcome to my Nix configuration repository! This repository contains my personal Nix configurations, managed using [Home Manager](https://github.com/nix-community/home-manager) and the [Nix package manager](https://nixos.org/nix/).
+### Recommended
+Install windows terminal (recommended if you use Windows ) for a nice, zen and beautiful terminal experience by using windows terminal in full screen mode<br>
 
-## Table of Contents
+Install nerd font, choose your favorite type (the configuration was tested with Mononoki nerd font mono) ```https://www.nerdfonts.com/```
 
-
-## Overview
-
-This repository serves as a comprehensive setup for managing my development environment and personal configurations using Nix. The configurations are declarative and can be easily reproduced across different systems.
-for the moment this flow has only been tested on a single WSL instance, for this reason the terminal configuration must be managed separately<br>
+The colorscheme used in the configurations is "tokyo night" so I recommend going to load the same colorscheme also on windows terminal.
+since it is not default I leave the one I generated below.
 ### Windows Terminal ColorSkin Tokyo Night
 ```json
 {
@@ -57,7 +63,49 @@ for the moment this flow has only been tested on a single WSL instance, for this
 },
 ```
 
-### Need nerdfont installed on the Host machine 
+Add the font and coloscheme to the windows terminal configuration by editing the Settings.json file
+```%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json```
+
+###Nix pkg manager 
+Nix is a powerful, purely functional package manager that allows users to build and manage software in a reproducible and declarative way. Unlike traditional package managers, Nix builds packages in isolated environments, ensuring that builds are deterministic and don't interfere with each other. This is achieved through its unique approach of using hash-based paths, making package dependencies explicit and avoiding version conflicts. Nix stores everything in a central store, allowing for atomic upgrades, rollbacks, and parallel installations. It was created by Eelco Dolstra during his PhD research to address the challenges of software deployment and reproducibility. Nix is used across various operating systems, making it highly versatile and portable, and its robust ecosystem includes Nixpkgs, a collection of thousands of packages that can be easily managed. With its declarative model, Nix simplifies the complexity of software management, allowing for reliable, user-friendly, and reproducible environments.<br>
+
+Since this configuration is designed to run on multiple systems I thought of using home manager (installed as flake) to manage the system. <br> 
+
+Below I also insert the process of the first configuration of nix for personal memory (I'm still studying nix and how to use it at its best) <br>
+
+## TEMP
+Welcome to my Nix configuration repository! This repository contains my personal Nix configurations, managed using [Home Manager](https://github.com/nix-community/home-manager) and the [Nix package manager](https://nixos.org/nix/).
+This repository serves as a comprehensive setup for managing my development environment and personal configurations using Nix. The configurations are declarative and can be easily reproduced across different systems.
+for the moment this flow has only been tested on a single WSL instance, for this reason the terminal configuration must be managed separately<br>
+
+installing nix ( https://nixos.org/download/ )
+```bash
+sh <(curl -L https://nixos.org/nix/install) --daemon
+```
+
+check nix installation
+```bash
+nix-shell -p neofetch --run neofetch
+```
+
+enabling nix-command and flakes 
+```bash
+echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf
+sudo systemctl restart nix-daemon.service
+cat /etc/nix/nix.conf
+```
+
+you can enable nix-command and flakes on a per command bases with 
+```bash
+--extra-experimental-features "nix-command flakes"
+```
+
+install home manager from official distribution
+```bash
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+```
 
 ## Customization
 
@@ -94,36 +142,8 @@ if the tmux doesn't load automatically force the configuration reload <special> 
 
 To install Nix and set up this configuration, follow these steps:
 
-installing nix ( https://nixos.org/download/ )
-```bash
-sh <(curl -L https://nixos.org/nix/install) --daemon
-```
 
-check nix installation
-```bash
-nix-shell -p neofetch --run neofetch
-```
-
-enabling nix-command and flakes 
-```bash
-echo "experimental-features = nix-command flakes" | sudo tee -a /etc/nix/nix.conf
-sudo systemctl restart nix-daemon.service
-cat /etc/nix/nix.conf
-```
-
-you can enable nix-command and flakes on a per command bases with 
-```bash
---extra-experimental-features "nix-command flakes"
-```
-
-install home manager from official distribution
-```bash
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-nix-shell '<home-manager>' -A install
-```
-
-## Usage
+## Nix Usage to install a new programm
 
 select a pkg from the nix repo or search directly from the command line
 ```bash
