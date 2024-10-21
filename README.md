@@ -21,7 +21,7 @@ For the moment this configuration has been created and tested only on WSL so the
 
 # Installation prerequisites
 
-##WSL
+### WSL
 
 installing a WSL instance ubuntu ```https://learn.microsoft.com/en-us/windows/wsl/install```
 install a Linux distru (Ubuntu by default) with
