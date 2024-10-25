@@ -11,7 +11,7 @@
     - [Everywhere](#everywhere)
     - [All at Once](#all-at-once)
 - [Installation prerequisites](#installation-prerequisites)
-- [Everything Everywhere All at Once](#Everything Everywhere All at Once)
+- [Configuration](#Configuration)
 
 ## Introduction
 
@@ -124,7 +124,7 @@ since it is not default I leave the one I generated below.
 Add the font and coloscheme to the windows terminal configuration by editing the Settings.json file
 ```%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json```
 
-## Everything Everywhere All at Once
+## Configuration
 
 installing nix ( https://nixos.org/download/ )
 ```bash
