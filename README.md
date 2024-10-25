@@ -11,7 +11,7 @@
     - [Everywhere](#everywhere)
     - [All at Once](#all-at-once)
 - [Installation prerequisites](#installation-prerequisites)
-- [Customization](#customization)
+- [Everything Everywhere All at Once](#Everything Everywhere All at Once)
 
 ## Introduction
 
