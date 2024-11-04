@@ -136,7 +136,23 @@ return {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				-- clangd = {},
-				-- gopls = {},
+				gopls = {
+					cmd = { "gopls" }, -- Command to start the gopls server
+					filetypes = { "go", "gomod", "gowork", "gotmpl" }, -- Filetypes to associate with gopls
+					settings = {
+						gopls = {
+							completeUnimported = true,
+							usePlaceholders = true,
+							analyses = {
+								unusedparams = true, -- Report unused parameters
+								nilness = true, -- Enable nilness analysis
+							},
+							staticcheck = true, -- Use static analysis for better diagnostics
+							gofumpt = true, -- Use gofumpt formatting style
+						},
+					},
+					capabilities = capabilities,
+				},
 				-- pyright = {},
 				-- rust_analyzer = {},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
