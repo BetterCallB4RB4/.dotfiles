@@ -46,7 +46,7 @@
     pkgs.kubernetes-helm
     #pkgs.terraform
     pkgs.awscli2
-    pkgs.fzf 
+    pkgs.fzf
     pkgs.k9s
     pkgs.tmux
     pkgs.clang-tools
@@ -62,6 +62,9 @@
     pkgs.nodejs_22
     pkgs.unzip
     pkgs.ripgrep
+
+    pkgs.go
+    pkgs.gotools
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,7 +86,7 @@
     package = pkgs.nix;
     settings.experimental-features = [ "nix-command" "flakes" ];
   };
-  
+
   # Home Manager can also manage your environment variables through
   # 'home.sessionVariables'. These will be explicitly sourced when using a
   # shell provided by Home Manager. If you don't want to manage your shell
