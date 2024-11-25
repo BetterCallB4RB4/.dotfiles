@@ -74,6 +74,9 @@ alias egrep='egrep --color=auto'
 alias daddy='sudo'
 alias python='python3'
 
+# Custom ENV Var
+PATH="$GOPATH/bin:$PATH"
+
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
