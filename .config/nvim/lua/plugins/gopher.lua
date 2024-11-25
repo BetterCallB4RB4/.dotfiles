@@ -1,19 +1,37 @@
 return {
 	{
 		"olexsmir/gopher.nvim",
-		ft = "go",
-		-- branch = "develop", -- if you want develop branch
-		-- keep in mind, it might break everything
+		ft = "go", -- Load plugin only for Go files
 		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			"mfussenegger/nvim-dap", -- (optional) only if you use `gopher.dap`
+			"nvim-lua/plenary.nvim", -- Utility library
+			"nvim-treesitter/nvim-treesitter", -- Tree-sitter support for Go
+			"mfussenegger/nvim-dap", -- Optional: for debugging with DAP
 		},
-		-- (optional) will update plugin's deps on every update
 		build = function()
-			vim.cmd.GoInstallDeps()
+			-- Install Go dependencies when the plugin is updated
+			vim.cmd("GoInstallDeps")
 		end,
-		---@type gopher.Config
-		opts = {},
+		opts = {
+			commands = {
+				go = "go",
+				gomodifytags = "gomodifytags",
+				gotests = "gotests",
+				impl = "impl",
+				iferr = "iferr",
+				dlv = "dlv",
+			},
+			gotests = {
+				-- Default test template
+				template = "default",
+				-- Directory for custom test templates (set to nil for no custom templates)
+				template_dir = nil,
+				-- Use map instead of slice for table tests
+				named = false,
+			},
+			gotag = {
+				-- Use snake_case for tag transformations
+				transform = "snakecase",
+			},
+		},
 	},
 }
