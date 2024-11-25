@@ -3,3 +3,6 @@
 .config/nvim/lazy-lock.json
 .config/dlv
 .config/go
+.config/environment.d
+.config/lazygit
+.config/nix

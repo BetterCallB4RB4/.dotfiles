@@ -62,6 +62,7 @@
     pkgs.nodejs_22
     pkgs.unzip
     pkgs.ripgrep
+    pkgs.lazygit
 
     pkgs.go
     pkgs.gotools
