@@ -44,7 +44,6 @@
     pkgs.git
     pkgs.kubectl
     pkgs.kubernetes-helm
-    #pkgs.terraform
     pkgs.awscli2
     pkgs.fzf
     pkgs.k9s
@@ -66,6 +65,8 @@
 
     pkgs.go
     pkgs.gotools
+
+    #pkgs.terraform
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -83,13 +84,6 @@
     # '';
   };
 
-  nix = {
-    package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  programas.git.enable = true;
-  #systemd.user.startService = "sd-switch";
 }

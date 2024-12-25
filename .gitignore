@@ -1,4 +1,6 @@
 *~
+*flake.lock
+
 .config/tmux/plugins
 .config/nvim/lazy-lock.json
 .config/dlv
@@ -6,3 +8,4 @@
 .config/environment.d
 .config/lazygit
 .config/nix
+
