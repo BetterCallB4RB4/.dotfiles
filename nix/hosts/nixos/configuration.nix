@@ -100,6 +100,8 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
      home-manager
+     mononoki
+     zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -111,6 +113,7 @@
   # };
 
   # List services that you want to enable:
+  users.defaultUserShell = pkgs.zsh;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
@@ -129,9 +132,7 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
-    openmoji-color
-  ];
+  
+
 }
 
