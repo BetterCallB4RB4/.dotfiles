@@ -101,6 +101,7 @@
      git
      neovim
      tree
+     home-manager
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -129,19 +130,5 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  # Enable flakes support for NixOS
-  nix.enableFlakes = true;
-
-  # Enable Home Manager and configure it using your flake
-  home-manager.useGlobalPKGS = true;  # Optionally make global pkgs available
-  home-manager.useUserPackages = true;  # Allow home manager to install user packages
-
-  # Link to your Home Manager flake
-  home-manager.configuration = ../../home-manager/flake.nix;
-
-  # Optionally: configure additional NixOS services or settings here
-  # e.g., enabling systemd services, etc.
-  
 }
 
