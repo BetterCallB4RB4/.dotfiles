@@ -66,6 +66,9 @@
     pkgs.go
     pkgs.gotools
 
+    pkgs.rustc
+    pkgs.cargo
+
     pkgs.terraform
   ];
 
