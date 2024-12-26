@@ -66,7 +66,7 @@
     pkgs.go
     pkgs.gotools
 
-    #pkgs.terraform
+    pkgs.terraform
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
