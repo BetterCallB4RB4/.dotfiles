@@ -102,7 +102,7 @@
      nerd-fonts.mononoki
      alacritty
      git
-     # lua-language-server
+     cool-retro-term
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
