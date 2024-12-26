@@ -85,6 +85,7 @@
     packages = with pkgs; [
     #  thunderbird
       google-chrome
+      zsh
     ];
   };
 
@@ -100,8 +101,10 @@
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
      home-manager
-     mononoki
-     zsh
+     # zsh
+     nerd-fonts.mononoki
+     wezterm
+     alacritty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -113,6 +116,7 @@
   # };
 
   # List services that you want to enable:
+  programs.zsh.enable    = true;
   users.defaultUserShell = pkgs.zsh;
 
   # Enable the OpenSSH daemon.
@@ -131,8 +135,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
-  
 
 }
 
