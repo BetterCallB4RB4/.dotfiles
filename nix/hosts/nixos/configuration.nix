@@ -48,6 +48,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+    # services.xserver.windowManager.gnome3.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -99,7 +100,6 @@
      home-manager
      zsh
      nerd-fonts.mononoki
-     google-chrome
      alacritty
      git
   ];
@@ -115,7 +115,10 @@
   # List services that you want to enable:
   programs.zsh.enable    = true;
   users.defaultUserShell = pkgs.zsh;
-
+  
+  # remove gnome default app
+  services.gnome.core-utilities.enable = false;
+  
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
