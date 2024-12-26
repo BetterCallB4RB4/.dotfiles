@@ -1,0 +1,53 @@
+[window]
+# startup_mode = "Fullscreen" | "Maximized" | "Fullscreen" | "SimpleFullscreen"
+startup_mode = "Maximized"
+decorations = "None"
+# opacity = 0.9
+
+[window.padding]
+x = 0
+y = 0
+
+[font]
+normal.family = "mononoki Nerd Font Mono"
+bold.family = "mononoki Nerd Font Mono"
+italic.family = "mononoki Nerd Font Mono"
+bold_italic.family = "mononoki Nerd Font Mono"
+size = 12.0
+
+[colors]
+  [colors.primary]
+  background = "#1A1B26"
+  foreground = "#C0CAF5"
+
+  [colors.normal]
+  black = "#15161E"
+  red = "#F7768E"
+  green = "#9ECE6A"
+  yellow = "#E0AF68"
+  blue = "#7AA2F7"
+  # purple = "#BB9AF7"
+  cyan = "#7DCFFF"
+  white = "#A9B1D6"
+
+  [colors.bright]
+  black = "#414868"
+  red = "#F7768E"
+  green = "#9ECE6A"
+  yellow = "#E0AF68"
+  blue = "#7AA2F7"
+  # purple = "#BB9AF7"
+  cyan = "#7DCFFF"
+  white = "#C0CAF5"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+unfocused_hollow = true
+
+[cursor.style]
+shape = 'Beam'
+
+[env]
+  TERM = "xterm-256color"
