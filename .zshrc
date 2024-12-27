@@ -75,7 +75,7 @@ alias daddy='sudo'
 alias python='python3'
 
 # Custom ENV Var
-PATH="$GOPATH/bin:$PATH"
+export PATH="$(go env GOPATH)/bin:$PATH"
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
