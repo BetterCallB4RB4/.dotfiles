@@ -12,9 +12,12 @@ return {
 			-- Keymap for Debugging
 			keymap("n", "<Space>db", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
 			keymap("n", "<Space>dc", dap.continue, { desc = "Continue Execution" })
-			keymap("n", "d]", dap.step_into, { desc = "Step Into" })
-			keymap("n", "d[", dap.step_over, { desc = "Step Over" })
+			keymap("n", "<Down>", dap.step_into, { desc = "Step Into" })
+			keymap("n", "<Right>", dap.step_over, { desc = "Step Over" })
 			keymap("n", "<Space>dq", dap.terminate, { desc = "Quit Debugging" })
+
+
+			vim.fn.sign_define('DapBreakpoint', { text='🔴', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
 
 			-- Set the sidebar width to 50% of the screen width
 			local screen_width = vim.api.nvim_win_get_width(0) -- Get the width of the current window
