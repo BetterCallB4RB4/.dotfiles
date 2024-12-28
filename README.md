@@ -155,9 +155,7 @@ cd ~/.dotfiles
 stow .
 ```
 
-<div style="border: 2px solid yellow; background-color: #fff3cd; color: #856404; padding: 10px; margin: 10px 0;">
-**Warning**: if application cannot detect change.... RRREEEEBOOOOOOTTTT 
-</div>
+> **Warning**: if application cannot detect change.... RRREEEEBOOOOOOTTTT 
 
 
 
