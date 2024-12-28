@@ -125,9 +125,7 @@ cd $HOME
 git clone https://github.com/BetterCallB4RB4/.dotfiles.git
 ```
 
-<div style="border: 2px solid yellow; background-color: #fff3cd; color: #856404; padding: 10px; margin: 10px 0;">
-**Warning**: if you are running NIXOS copy harware configuration in to the correct directory inside the repository
-</div>
+> **Warning**: if you are running NIXOS copy harware configuration in to the correct directory inside the repository
 
 move to the directory ${HOME}/.dotfiles and build nix configuration 
 ```bash
