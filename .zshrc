@@ -35,13 +35,10 @@ bindkey -e
 
 bindkey -r '^f'
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
-bindkey "^h" backward-char
-bindkey "^l" forward-char
 bindkey "^b" backward-word
 bindkey "^w" forward-word
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-
+bindkey '^p' backward-char
+bindkey '^n' forward-char
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
