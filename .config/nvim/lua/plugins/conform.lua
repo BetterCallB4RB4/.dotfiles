@@ -25,13 +25,9 @@ return {
 				}
 			end,
 			formatters_by_ft = {
+				-- check in the lasp-config if your formatter is in the ensure installed list
 				lua = { "stylua" },
-				-- Conform can also run multiple formatters sequentially
-				-- python = { "isort", "black" },
-				--
-				-- You can use a sub-list to tell conform to run *until* a formatter
-				-- is found.
-				-- javascript = { { "prettierd", "prettier" } },
+    	        go = { "gopls" },  -- Go formatters
 			},
 		},
 	},

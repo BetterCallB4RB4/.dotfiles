@@ -35,6 +35,8 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    
+    #tool
     pkgs.neofetch
     pkgs.starship
     pkgs.stow
@@ -48,28 +50,37 @@
     pkgs.fzf
     pkgs.k9s
     pkgs.tmux
-    pkgs.clang-tools
-    pkgs.cmake
-    pkgs.codespell
-    pkgs.conan
-    pkgs.cppcheck
-    pkgs.doxygen
-    pkgs.gtest
-    pkgs.lcov
-    pkgs.zig
-    pkgs.cargo
-    pkgs.nodejs_22
     pkgs.unzip
     pkgs.ripgrep
     pkgs.lazygit
+    pkgs.terraform
 
+    #go
     pkgs.go
     pkgs.gotools
 
+    #rust
     pkgs.rustc
     pkgs.cargo
 
-    pkgs.terraform
+    #zig
+    pkgs.zig
+
+    #node
+    pkgs.nodejs_22
+
+    #C
+    pkgs.clang-tools
+    pkgs.cmake
+    pkgs.cppcheck
+    pkgs.codespell
+    pkgs.conan
+    pkgs.doxygen
+    pkgs.gtest
+    pkgs.lcov
+    pkgs.libgcc
+    pkgs.vcpkg
+    pkgs.vcpkg-tool
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
