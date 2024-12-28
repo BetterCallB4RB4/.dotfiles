@@ -1,4 +1,5 @@
 return {
+
 	{
 		"gelguy/wilder.nvim",
 		dependencies = { "romgrk/fzy-lua-native" },
