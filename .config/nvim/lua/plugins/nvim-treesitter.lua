@@ -11,6 +11,7 @@ return {
 			  "bash", 
 			  "markdown", 
 			  "go", 
+			  "terraform", 
 		  },
           sync_install = false,
           highlight = { enable = true },

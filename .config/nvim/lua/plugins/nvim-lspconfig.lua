@@ -125,7 +125,17 @@ return {
 					},
 					capabilities = capabilities,
 				},
-				stylua = {} -- lua formatter
+				stylua = {}, -- lua formatter
+				terraformls = {
+				    cmd = { "terraform-ls", "serve" },  -- Command to start terraform-ls
+				    filetypes = { "terraform", "hcl", "tf", "tfvars" },  -- Filetypes for Terraform
+				    settings = {
+				        terraform = {
+				           -- You can add Terraform-specific settings here
+				        },
+				    },
+				    capabilities = capabilities,  -- assuming you have a `capabilities` variable defined earlier for LSP capabilities
+				},
 			}
 
 			-- Ensure the servers and tools above are installed
