@@ -7,12 +7,6 @@ vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true
 vim.api.nvim_set_keymap("n", "{", "}", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "}", "{", { noremap = true, silent = true })
 
---  See `:help wincmd` for a list of all window commands
--- vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
--- vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
--- vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
--- vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
-
 -- just disable this function
 vim.keymap.set("n", "Q", "<nop>")
 
@@ -20,8 +14,12 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- emulate ctr-d function in vs code in combination with the plugin multiline
-vim.g.VM_maps = {
-	["Find Under"] = "<C-q>",
-	["Find Subword Under"] = "<C-q>",
-}
+-- Move selected text up and down
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+
+
+-- Indent selected text to the left and right
+vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
+vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
+

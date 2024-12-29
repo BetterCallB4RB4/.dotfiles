@@ -25,9 +25,8 @@ return {
 				}
 			end,
 			formatters_by_ft = {
-				-- check in the lasp-config if your formatter is in the ensure installed list
 				lua = { "stylua" },
-    	        go = { "gopls" },  -- Go formatters
+				go = { "gopls" },  -- Go formatters
 			},
 		},
 	},
