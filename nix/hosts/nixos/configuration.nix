@@ -104,6 +104,7 @@
      git
      cool-retro-term
      nautilus
+     discord
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
