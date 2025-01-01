@@ -24,6 +24,27 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+  
+  hardware.nvidia.prime = {
+    sync.enable = true;
+    # integrated
+    intelBusId = "PCI:0:2:0"; #nix shell --extra-experimental-features 'nix-command flakes' nixpkgs#pciutils -c lspci  | grep ' VGA '
+  };
+  
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+# environment.systemPackages = with pkgs; [
+#   mangohud #hud for gaming stats 
+# ];
+
+
+
+
+
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
@@ -105,6 +126,8 @@
      cool-retro-term
      nautilus
      discord
+     lutris
+     xclip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

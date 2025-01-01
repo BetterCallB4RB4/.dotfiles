@@ -12,8 +12,8 @@ return {
 			-- Keymap for Debugging
 			keymap("n", "<Space>db", dap.toggle_breakpoint, { desc = "Toggle Breakpoint" })
 			keymap("n", "<Space>dc", dap.continue, { desc = "Continue Execution" })
-			keymap("n", "<Down>", dap.step_into, { desc = "Step Into" })
-			keymap("n", "<Right>", dap.step_over, { desc = "Step Over" })
+			keymap("n", "<Right>", dap.step_into, { desc = "Step Into" })
+			keymap("n", "<Down>", dap.step_over, { desc = "Step Over" })
 			keymap("n", "<Space>dq", dap.terminate, { desc = "Quit Debugging" })
 
 
@@ -40,6 +40,17 @@ return {
 			dap.listeners.before.event_exited["dapui_config"] = function()
 				sidebar.close()
 			end
+			dap.configurations.go = {
+			{
+					type = 'go',
+					name = 'Debug Cobra CLI',
+					request = 'launch',
+					mode = 'debug',
+					program = '/home/dimi/goProjets/5-projects-2-learn-GO/01-todo-list',  -- Adjust path to your Cobra CLI application
+					args = {"add", "task"},  -- Optional: add any command-line args if needed
+					showLog = true  -- Optional: shows Delve logs in the console  
+				}
+			}
 		end,
 	},
 }
