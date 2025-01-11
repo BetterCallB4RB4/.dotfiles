@@ -79,7 +79,7 @@
     pkgs.gtest
     pkgs.lcov
     pkgs.libgcc
-    pkgs.vcpkg
+    #pkgs.vcpkg
     pkgs.vcpkg-tool
   ];
 
