@@ -23,3 +23,6 @@ vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true
 vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
 vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
 
+-- never lost last buffer
+vim.keymap.set("x", "p", [["_dP]])
+
