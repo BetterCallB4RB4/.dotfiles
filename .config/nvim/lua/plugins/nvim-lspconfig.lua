@@ -136,6 +136,22 @@ return {
 				    },
 				    capabilities = capabilities,  -- assuming you have a `capabilities` variable defined earlier for LSP capabilities
 				},
+				groovyls = {
+					cmd = { "groovy-language-server" }, -- Command to start the Groovy LSP server
+					filetypes = { "groovy" }, -- Filetypes to associate with groovy-language-server
+					root_dir = function(fname)
+						return vim.fn.expand("%:p:h")
+					end,
+					settings = {
+						groovy = {
+							classpath = {
+								"",
+								"",
+							},
+						},
+					},
+					capabilities = capabilities, -- Use your predefined capabilities
+				},
 			}
 
 			-- Ensure the servers and tools above are installed
