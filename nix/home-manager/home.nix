@@ -54,6 +54,7 @@
     pkgs.ripgrep
     pkgs.lazygit
     pkgs.terraform
+    pkgs.tree
 
     #go
     pkgs.go
@@ -81,6 +82,7 @@
     pkgs.libgcc
     #pkgs.vcpkg
     pkgs.vcpkg-tool
+    pkgs.gcc
 
     #JAVA
     pkgs.jdk17
