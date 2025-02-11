@@ -46,8 +46,8 @@ return {
 					name = 'Debug Cobra CLI',
 					request = 'launch',
 					mode = 'debug',
-					program = '/home/dimi/goProjets/5-projects-2-learn-GO/01-todo-list',  -- Adjust path to your Cobra CLI application
-					args = {"add", "task"},  -- Optional: add any command-line args if needed
+					program = '',  -- Adjust path to your Cobra CLI application
+					args = {""},  -- Optional: add any command-line args if needed
 					showLog = true  -- Optional: shows Delve logs in the console  
 				}
 			}
