@@ -12,10 +12,25 @@ return {
 			  "markdown", 
 			  "go", 
 			  "terraform", 
+			  "groovy", 
 		  },
-          sync_install = false,
+          sync_install = true,
           highlight = { enable = true },
           indent = { enable = true },  
         })
-    end
+    end,
+    config = function(_, opts)
+	require("nvim-treesitter.configs").setup(opts)
+	vim.cmd([[
+          augroup filetypedetect
+            autocmd BufRead,BufNewFile *.Jenkinsfile set filetype=groovy
+          augroup END
+        ]])
+	vim.cmd([[
+          augroup filetypedetect
+            autocmd BufRead,BufNewFile *.tfvars set filetype=terraform 
+          augroup END
+        ]])
+    end,
+
 }
