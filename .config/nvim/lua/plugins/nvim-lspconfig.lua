@@ -127,14 +127,10 @@ return {
 				},
 				stylua = {}, -- lua formatter
 				terraformls = {
-				    cmd = { "terraform-ls", "serve" },  -- Command to start terraform-ls
-				    filetypes = { "terraform", "hcl", "tf", "tfvars" },  -- Filetypes for Terraform
-				    settings = {
-				        terraform = {
-				           -- You can add Terraform-specific settings here
-				        },
-				    },
-				    capabilities = capabilities,  -- assuming you have a `capabilities` variable defined earlier for LSP capabilities
+					cmd = { "terraform-ls", "serve" },  -- Command to start terraform-ls
+					filetypes = { "terraform", "hcl", "tf"},  -- Filetypes for Terraform
+					settings = {},
+				        capabilities = capabilities,  -- assuming you have a `capabilities` variable defined earlier for LSP capabilities
 				},
 				groovyls = {
 					cmd = { "groovy-language-server" }, -- Command to start the Groovy LSP server
@@ -144,10 +140,7 @@ return {
 					end,
 					settings = {
 						groovy = {
-							classpath = {
-								"",
-								"",
-							},
+							classpath = {},
 						},
 					},
 					capabilities = capabilities, -- Use your predefined capabilities
