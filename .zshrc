@@ -73,6 +73,8 @@ alias python='python3'
 
 # Custom ENV Var
 export PATH="$(go env GOPATH)/bin:$PATH"
+export NIXPKGS_ALLOW_UNFREE=1
+export JAVA_HOME=$(readlink -f ~/.nix-profile/bin/java | sed 's:/bin/java::')
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)

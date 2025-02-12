@@ -45,11 +45,11 @@ return {
 			dap.configurations.go = {
 				{
 					type = "go",
-					name = "Debug Cobra CLI",
+					name = "start debugging interface",
 					request = "launch",
 					mode = "debug",
-					program = "/home/dimi/goProjets/5-projects-2-learn-GO/01-todo-list", -- Adjust path to your Cobra CLI application
-					args = { "remove" }, -- Optional: add any command-line args if needed
+					program = "/home/dimi/main", -- path to you go program binary
+					args = {}, -- add argument like this {"add", "task"}
 					showLog = true, -- Optional: shows Delve logs in the console
 				},
 			}
