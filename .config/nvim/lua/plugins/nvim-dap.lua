@@ -16,8 +16,10 @@ return {
 			keymap("n", "<Down>", dap.step_over, { desc = "Step Over" })
 			keymap("n", "<Space>dq", dap.terminate, { desc = "Quit Debugging" })
 
-
-			vim.fn.sign_define('DapBreakpoint', { text='🔴', texthl='DapBreakpoint', linehl='DapBreakpoint', numhl='DapBreakpoint' })
+			vim.fn.sign_define(
+				"DapBreakpoint",
+				{ text = "🔴", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
+			)
 
 			-- Set the sidebar width to 50% of the screen width
 			local screen_width = vim.api.nvim_win_get_width(0) -- Get the width of the current window
@@ -41,15 +43,15 @@ return {
 				sidebar.close()
 			end
 			dap.configurations.go = {
-			{
-					type = 'go',
-					name = 'Debug Cobra CLI',
-					request = 'launch',
-					mode = 'debug',
-					program = '/home/dimi/goProjets/5-projects-2-learn-GO/01-todo-list',  -- Adjust path to your Cobra CLI application
-					args = {"add", "task"},  -- Optional: add any command-line args if needed
-					showLog = true  -- Optional: shows Delve logs in the console  
-				}
+				{
+					type = "go",
+					name = "Debug Cobra CLI",
+					request = "launch",
+					mode = "debug",
+					program = "/home/dimi/goProjets/5-projects-2-learn-GO/01-todo-list", -- Adjust path to your Cobra CLI application
+					args = { "remove" }, -- Optional: add any command-line args if needed
+					showLog = true, -- Optional: shows Delve logs in the console
+				},
 			}
 		end,
 	},
