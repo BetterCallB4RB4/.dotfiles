@@ -23,8 +23,6 @@ return {
 				defaults = {
 					mappings = {
 						i = {
-							["<c-enter>"] = "to_fuzzy_refine",
-							-- Map Ctrl-k to move up in the list
 							["<C-j>"] = require("telescope.actions").move_selection_next,
 							["<C-k>"] = require("telescope.actions").move_selection_previous,
 						},
