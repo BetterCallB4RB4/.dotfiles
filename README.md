@@ -58,7 +58,7 @@ wsl --install
 ### Windows Terminal ColorSkin Tokyo Night
 ```json
 {
-    "background": "#1A1B26",
+    "background": "#1E1E2E",
     "black": "#15161E",
     "blue": "#7AA2F7",
     "brightBlack": "#414868",
