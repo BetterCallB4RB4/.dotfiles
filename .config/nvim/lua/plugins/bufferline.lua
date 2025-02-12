@@ -8,8 +8,15 @@ return {
 
       require("bufferline").setup {
         options = {
-          mode = "buffers", -- or "buffers"
-          style = "underline", -- or "minimal", "underline", etc.
+          mode = "buffers",
+          themable = true,
+          style = "minimal",
+        },
+        highlights = {
+            fill = {
+                fg = '#1A1B26',
+                bg = '#1A1B26',
+            },
         },
       }
     end,
