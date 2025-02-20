@@ -8,7 +8,13 @@ return {
 				themes = {
 					"tokyonight-night",
 					"tokyonight-moon",
-					"kanagawa",
+					"tokyonight-day",
+					"kanagawa-wave",
+					"kanagawa-lotus",
+					"kanagawa-dragon",
+					"rose-pine-main",
+					"rose-pine-moon",
+					"rose-pine-dawn",
 				},
 				livePreview = true,
 			})
@@ -18,6 +24,7 @@ return {
 	-- THEMES --
 	{
 		"rebelot/kanagawa.nvim",
+		priority = 1000, -- load this before other plugins.
 		init = function()
 			require("kanagawa").setup()
 		end,
@@ -29,6 +36,13 @@ return {
 			-- 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 			vim.cmd.colorscheme("tokyonight-night")
 			vim.cmd.hi("Comment gui=none")
+		end,
+	},
+	{
+		"rose-pine/neovim",
+		priority = 1000, -- load this before other plugins.
+		config = function()
+			vim.cmd("colorscheme rose-pine")
 		end,
 	},
 }
