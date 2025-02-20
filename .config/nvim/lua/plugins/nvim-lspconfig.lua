@@ -6,7 +6,7 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-            "j-hui/fidget.nvim",
+	                "j-hui/fidget.nvim",
 			-- Useful status updates for LSP.
 			-- `opts = {}` is the same as calling `require('fidget').setup({})`
 			-- { "j-hui/fidget.nvim", opts = {} },
@@ -97,6 +97,8 @@ return {
 			--  By default, Neovim doesn't support everything that is in the LSP specification.
 			--  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
 			--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
+
+			-- capabilities for nvim-cmp
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
