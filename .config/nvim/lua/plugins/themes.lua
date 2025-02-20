@@ -23,19 +23,19 @@ return {
 
 	-- THEMES --
 	{
-		"rebelot/kanagawa.nvim",
-		priority = 1000, -- load this before other plugins.
-		init = function()
-			require("kanagawa").setup()
-		end,
-	},
-	{
 		"folke/tokyonight.nvim",
 		priority = 1000, -- load this before other plugins.
 		init = function()
 			-- 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 			vim.cmd.colorscheme("tokyonight-night")
 			vim.cmd.hi("Comment gui=none")
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000, -- load this before other plugins.
+		init = function()
+			require("kanagawa").setup()
 		end,
 	},
 	{
