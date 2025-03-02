@@ -1,7 +1,8 @@
 return {
+	-- use colorscheme command
 	{
 		"folke/tokyonight.nvim",
-		priority = 1000, -- load this before other plugins.
+		priority = 1001, -- load this before other plugins.
 		init = function()
 			-- 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 			vim.cmd.colorscheme("tokyonight-night")
@@ -18,9 +19,6 @@ return {
 	{
 		"rose-pine/neovim",
 		priority = 1000, -- load this before other plugins.
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
 	},
 	{
 		"ellisonleao/gruvbox.nvim",
