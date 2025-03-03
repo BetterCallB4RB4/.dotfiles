@@ -1,30 +1,8 @@
 return {
-	-- THEME SELECTORS --
-	{
-		"zaldih/themery.nvim",
-		lazy = false,
-		config = function()
-			require("themery").setup({
-				themes = {
-					"tokyonight-night",
-					"tokyonight-moon",
-					"tokyonight-day",
-					"kanagawa-wave",
-					"kanagawa-lotus",
-					"kanagawa-dragon",
-					"rose-pine-main",
-					"rose-pine-moon",
-					"rose-pine-dawn",
-				},
-				livePreview = true,
-			})
-		end,
-	},
-
-	-- THEMES --
+	-- use colorscheme command
 	{
 		"folke/tokyonight.nvim",
-		priority = 1000, -- load this before other plugins.
+		priority = 1001, -- load this before other plugins.
 		init = function()
 			-- 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 			vim.cmd.colorscheme("tokyonight-night")
@@ -41,8 +19,13 @@ return {
 	{
 		"rose-pine/neovim",
 		priority = 1000, -- load this before other plugins.
+	},
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000, -- load this before other plugins.
+		config = true,
 		config = function()
-			vim.cmd("colorscheme rose-pine")
+			vim.o.background = "dark"
 		end,
 	},
 }
