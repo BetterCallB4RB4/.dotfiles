@@ -55,6 +55,7 @@
     pkgs.lazygit
     pkgs.terraform
     pkgs.tree
+    pkgs.dig
 
     #go
     pkgs.go
