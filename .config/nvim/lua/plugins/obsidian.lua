@@ -14,7 +14,7 @@ return {
 		    workspaces = {
 		      {
 			name = "personal",
-			path = "~/obsidian-notes/",
+			path = "~/obsidian/obsidian-notes",
 		      },
 		    },
 		  },
