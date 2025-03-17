@@ -110,6 +110,7 @@ return {
 			--  For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				delve = {}, -- go debugger
+				stylua = {}, -- lua formatter
 				gopls = {
 					cmd = { "gopls" }, -- Command to start the gopls server
 					filetypes = { "go", "gomod", "gowork", "gotmpl" }, -- Filetypes to associate with gopls
@@ -127,7 +128,6 @@ return {
 					},
 					capabilities = capabilities,
 				},
-				stylua = {}, -- lua formatter
 				terraformls = {
 					cmd = { "terraform-ls", "serve" },  -- Command to start terraform-ls
 					filetypes = { "terraform", "hcl", "tf"},  -- Filetypes for Terraform
