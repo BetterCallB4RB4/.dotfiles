@@ -18,6 +18,9 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
+
+  # search your pkgs here 
+  # https://search.nixos.org/packages
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
@@ -56,6 +59,8 @@
     pkgs.terraform
     pkgs.tree
     pkgs.dig
+    pkgs.arduino-cli
+    pkgs.usbutils
 
     #go
     pkgs.go
