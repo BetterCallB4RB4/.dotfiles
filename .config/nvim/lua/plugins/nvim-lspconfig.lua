@@ -147,6 +147,7 @@ return {
 					},
 					capabilities = capabilities, -- Use your predefined capabilities
 				},
+
 			}
 
 			-- Ensure the servers and tools above are installed
