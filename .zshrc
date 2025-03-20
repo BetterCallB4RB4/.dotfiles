@@ -39,6 +39,10 @@ bindkey "^b" backward-word
 bindkey "^w" forward-word
 bindkey '^p' backward-char
 bindkey '^n' forward-char
+
+#work around for WSL with windows terminal
+bindkey "^[[3~" delete-char
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
