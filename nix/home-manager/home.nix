@@ -61,9 +61,10 @@
     pkgs.dig
     pkgs.arduino-cli
     pkgs.usbutils
-    pkgs.podman
     pkgs.lazydocker
     pkgs.jq
+    pkgs.podman
+    pkgs.shadow
 
     #go
     pkgs.go

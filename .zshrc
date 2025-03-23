@@ -74,7 +74,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias daddy='sudo'
 alias python='python3'
-alias docker='podman'
+# alias docker='podman'
 
 # Custom ENV Var
 export PATH="$(go env GOPATH)/bin:$PATH"
