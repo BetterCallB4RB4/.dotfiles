@@ -6,13 +6,12 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
-	                "j-hui/fidget.nvim",
+			"j-hui/fidget.nvim",
 			-- Useful status updates for LSP.
 			-- `opts = {}` is the same as calling `require('fidget').setup({})`
 			-- { "j-hui/fidget.nvim", opts = {} },
 		},
 		config = function()
-
 			--  This function gets run when an LSP attaches to a particular buffer.
 			--    That is to say, every time a new file is opened that is associated with
 			--    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
@@ -129,10 +128,10 @@ return {
 					capabilities = capabilities,
 				},
 				terraformls = {
-					cmd = { "terraform-ls", "serve" },  -- Command to start terraform-ls
-					filetypes = { "terraform", "hcl", "tf"},  -- Filetypes for Terraform
+					cmd = { "terraform-ls", "serve" }, -- Command to start terraform-ls
+					filetypes = { "terraform", "hcl", "tf" }, -- Filetypes for Terraform
 					settings = {},
-				        capabilities = capabilities,  -- assuming you have a `capabilities` variable defined earlier for LSP capabilities
+					capabilities = capabilities, -- assuming you have a `capabilities` variable defined earlier for LSP capabilities
 				},
 				groovyls = {
 					cmd = { "groovy-language-server" }, -- Command to start the Groovy LSP server
@@ -145,9 +144,25 @@ return {
 							classpath = {},
 						},
 					},
-					capabilities = capabilities, -- Use your predefined capabilities
+					capabilities = capabilities,
 				},
-
+				lua_ls = {
+					settings = {
+						Lua = {
+							diagnostics = {
+								globals = { "vim" },
+							},
+							workspace = {
+								library = vim.api.nvim_get_runtime_file("", true),
+								checkThirdParty = false,
+							},
+							telemetry = {
+								enable = false,
+							},
+						},
+					},
+					capabilities = capabilities,
+				},
 			}
 
 			-- Ensure the servers and tools above are installed
