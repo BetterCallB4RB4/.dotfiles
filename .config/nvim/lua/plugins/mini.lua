@@ -2,7 +2,6 @@ return {
 	{
 		"echasnovski/mini.nvim",
 		config = function()
-
 			-- Better Around/Inside textobjects
 			-- Examples:
 			--  - va)  - [V]isually select [A]round [)]paren
@@ -24,7 +23,6 @@ return {
 
 			-- set use_icons to true if you have a Nerd Font
 			statusline.setup({ use_icons = vim.g.have_nerd_font })
-
 		end,
 	},
 }
