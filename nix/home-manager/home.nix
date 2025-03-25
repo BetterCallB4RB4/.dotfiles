@@ -63,8 +63,6 @@
     pkgs.usbutils
     pkgs.lazydocker
     pkgs.jq
-    pkgs.podman
-    pkgs.shadow
 
     #go
     pkgs.go
