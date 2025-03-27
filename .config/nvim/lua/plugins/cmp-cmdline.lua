@@ -1,4 +1,4 @@
--- this is still not compliting the with fuzzy as i want 
+-- this is still not compliting the with fuzzy as i want
 return {
 	--this plugin allow you to have a better completition and cool aspect for command like : and /
 	-- this will substitute wilder
