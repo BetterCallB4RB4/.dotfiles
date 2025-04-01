@@ -62,7 +62,9 @@ vim.opt.scrolloff = 10
 --  See `:help vim.keymap.set()`
 
 -- avoid go to new line for long line
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.list = true
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
