@@ -7,6 +7,11 @@ return {
 			-- 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 			vim.cmd.colorscheme("tokyonight-night")
 			vim.cmd.hi("Comment gui=none")
+
+			-- color object releted on the current palette
+			vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#b4f9f8" })
+			vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#b4f9f8" })
+			vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#b4f9f8" })
 		end,
 	},
 	{
