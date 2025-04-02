@@ -3,7 +3,15 @@ return {
 		"folke/noice.nvim",
 		event = "VeryLazy",
 		opts = {
-			-- add any options here
+			lsp = {
+				diagnostics = {
+					enabled = {
+						min_width = 50,
+						max_width = 150,
+					},
+					virtual_text = false,
+				},
+			},
 		},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
@@ -20,7 +28,6 @@ return {
 			enabled = true, -- enables the Noice cmdline UI
 			view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
 			opts = {}, -- global options for the cmdline. See section on views
-			---@type table<string, CmdlineFormat>
 			format = {
 				cmdline = { pattern = "^:", icon = "", lang = "vim" },
 				search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },

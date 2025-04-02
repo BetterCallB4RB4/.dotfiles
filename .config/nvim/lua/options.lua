@@ -77,7 +77,6 @@ vim.o.laststatus = 3
 ---
 -------------------------------------
 
--- native lsp config support
 vim.lsp.config["luals"] = {
 	-- Command and arguments to start the server.
 	cmd = { "lua-language-server" },
@@ -144,9 +143,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 -- virtual text
--- vim.diagnostic.config({
--- 	virtual_text = { current_line = true },
--- 	virtual_lines = {
--- 		current_line = true,
--- 	},
--- })
+vim.diagnostic.config({
+	virtual_text = { current_line = true },
+	virtual_lines = {
+		current_line = true,
+	},
+})
