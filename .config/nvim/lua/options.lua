@@ -70,3 +70,83 @@ vim.opt.list = true
 vim.opt.hlsearch = true
 
 vim.o.laststatus = 3
+
+-------------------------------------
+---
+--- TESTING NVIM 0.11 NEW FEATURE
+---
+-------------------------------------
+
+-- native lsp config support
+vim.lsp.config["luals"] = {
+	-- Command and arguments to start the server.
+	cmd = { "lua-language-server" },
+
+	-- Filetypes to automatically attach to.
+	filetypes = { "lua" },
+
+	-- Sets the "root directory" to the parent directory of the file in the
+	-- current buffer that contains either a ".luarc.json" or a
+	-- ".luarc.jsonc" file. Files that share a root directory will reuse
+	-- the connection to the same LSP server.
+	root_markers = { ".luarc.json", ".luarc.jsonc" },
+
+	-- Specific settings to send to the server. The schema for this is
+	-- defined by the server. For example the schema for lua-language-server
+	-- can be found here https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
+	settings = {
+		Lua = {
+			runtime = {
+				version = "LuaJIT",
+			},
+		},
+	},
+}
+vim.lsp.config["gopls"] = {
+	-- Command and arguments to start the server.
+	cmd = { "gopls" },
+
+	-- Filetypes to automatically attach to.
+	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+
+	-- Sets the "root directory" to the parent directory of the file in the
+	-- current buffer that contains either a ".luarc.json" or a
+	-- ".luarc.jsonc" file. Files that share a root directory will reuse
+	-- the connection to the same LSP server.
+
+	-- Specific settings to send to the server. The schema for this is
+	-- defined by the server. For example the schema for lua-language-server
+	-- can be found here https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
+	settings = {
+		gopls = {
+			completeUnimported = true,
+			usePlaceholders = true,
+			analyses = {
+				unusedparams = true, -- Report unused parameters
+				nilness = true, -- Enable nilness analysis
+			},
+			staticcheck = true, -- Use static analysis for better diagnostics
+			gofumpt = true, -- Use gofumpt formatting style
+		},
+	},
+}
+vim.lsp.enable("luals")
+vim.lsp.enable("gopls")
+
+-- auto completion
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(ev)
+		local client = vim.lsp.get_client_by_id(ev.data.client_id)
+		if client:supports_method("textDocument/completion") then
+			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+		end
+	end,
+})
+
+-- virtual text
+-- vim.diagnostic.config({
+-- 	virtual_text = { current_line = true },
+-- 	virtual_lines = {
+-- 		current_line = true,
+-- 	},
+-- })

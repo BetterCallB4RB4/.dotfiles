@@ -99,7 +99,7 @@ return {
 
 			-- capabilities for nvim-cmp
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+			-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 			--  Add any additional override configuration in the following tables. Available keys are:
 			--  - cmd (table): Override the default command used to start the server
@@ -109,24 +109,24 @@ return {
 			--  For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 			local servers = {
 				delve = {}, -- go debugger
-				stylua = {}, -- lua formatter
-				gopls = {
-					cmd = { "gopls" }, -- Command to start the gopls server
-					filetypes = { "go", "gomod", "gowork", "gotmpl" }, -- Filetypes to associate with gopls
-					settings = {
-						gopls = {
-							completeUnimported = true,
-							usePlaceholders = true,
-							analyses = {
-								unusedparams = true, -- Report unused parameters
-								nilness = true, -- Enable nilness analysis
-							},
-							staticcheck = true, -- Use static analysis for better diagnostics
-							gofumpt = true, -- Use gofumpt formatting style
-						},
-					},
-					capabilities = capabilities,
-				},
+				-- stylua = {}, -- lua formatter
+				-- gopls = {
+				-- 	cmd = { "gopls" }, -- Command to start the gopls server
+				-- 	filetypes = { "go", "gomod", "gowork", "gotmpl" }, -- Filetypes to associate with gopls
+				-- 	settings = {
+				-- 		gopls = {
+				-- 			completeUnimported = true,
+				-- 			usePlaceholders = true,
+				-- 			analyses = {
+				-- 				unusedparams = true, -- Report unused parameters
+				-- 				nilness = true, -- Enable nilness analysis
+				-- 			},
+				-- 			staticcheck = true, -- Use static analysis for better diagnostics
+				-- 			gofumpt = true, -- Use gofumpt formatting style
+				-- 		},
+				-- 	},
+				-- 	capabilities = capabilities,
+				-- },
 				terraformls = {
 					cmd = { "terraform-ls", "serve" }, -- Command to start terraform-ls
 					filetypes = { "terraform", "hcl", "tf" }, -- Filetypes for Terraform
@@ -146,23 +146,23 @@ return {
 					},
 					capabilities = capabilities,
 				},
-				lua_ls = {
-					settings = {
-						Lua = {
-							diagnostics = {
-								globals = { "vim" },
-							},
-							workspace = {
-								library = vim.api.nvim_get_runtime_file("", true),
-								checkThirdParty = false,
-							},
-							telemetry = {
-								enable = false,
-							},
-						},
-					},
-					capabilities = capabilities,
-				},
+				-- lua_ls = {
+				-- 	settings = {
+				-- 		Lua = {
+				-- 			diagnostics = {
+				-- 				globals = { "vim" },
+				-- 			},
+				-- 			workspace = {
+				-- 				library = vim.api.nvim_get_runtime_file("", true),
+				-- 				checkThirdParty = false,
+				-- 			},
+				-- 			telemetry = {
+				-- 				enable = false,
+				-- 			},
+				-- 		},
+				-- 	},
+				-- 	capabilities = capabilities,
+				-- },
 			}
 
 			-- Ensure the servers and tools above are installed
@@ -171,18 +171,18 @@ return {
 			--    :Mason
 			require("mason").setup()
 
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			-- require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- certain features of an LSP (for example, turning off formatting for tsserver)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						require("lspconfig")[server_name].setup(server)
-					end,
-				},
-			})
+			-- require("mason-lspconfig").setup({
+			-- 	handlers = {
+			-- 		function(server_name)
+			-- 			local server = servers[server_name] or {}
+			-- 			-- certain features of an LSP (for example, turning off formatting for tsserver)
+			-- 			server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+			-- 			require("lspconfig")[server_name].setup(server)
+			-- 		end,
+			-- 	},
+			-- })
 		end,
 	},
 }
