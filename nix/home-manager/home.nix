@@ -63,6 +63,7 @@
     pkgs.usbutils
     pkgs.lazydocker
     pkgs.jq
+    pkgs.sqlite
 
     #go
     pkgs.go
