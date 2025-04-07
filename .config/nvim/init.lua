@@ -14,6 +14,9 @@ require("keymaps")
 -- Load auto commands
 require("autocmds")
 
+-- Load auto commands
+require("lsp")
+
 -- install lazynvim as a plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
