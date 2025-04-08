@@ -19,23 +19,23 @@ vim.lsp.config["gopls"] = {
 			completeUnimported = true,
 			usePlaceholders = true,
 			analyses = {
-				unusedparams = true, -- Report unused parameters
-				nilness = true, -- Enable nilness analysis
+				unusedparams = true,
+				nilness = true,
 			},
-			staticcheck = true, -- Use static analysis for better diagnostics
-			gofumpt = true, -- Use gofumpt formatting style
+			staticcheck = true,
+			gofumpt = true,
 		},
 	},
 }
 
 vim.lsp.config["terraformls"] = {
-	cmd = { "terraform-ls", "serve" }, -- Command to start terraform-ls
-	filetypes = { "terraform", "hcl", "tf" }, -- Filetypes for Terraform
+	cmd = { "terraform-ls", "serve" },
+	filetypes = { "terraform", "hcl", "tf" },
 }
 
 vim.lsp.config["groovyls"] = {
-	cmd = { "groovy-language-server" }, -- Command to start the Groovy LSP server
-	filetypes = { "groovy" }, -- Filetypes to associate with groovy-language-server
+	cmd = { "groovy-language-server" },
+	filetypes = { "groovy" },
 	root_dir = "/home/jd4augbarbad/gitOps/ITIO-shared-libraries/jenkins-library-cd/src",
 }
 
@@ -43,11 +43,3 @@ vim.lsp.enable("luals")
 vim.lsp.enable("gopls")
 vim.lsp.enable("groovyls")
 vim.lsp.enable("terraformls")
-
--- virtual text
--- vim.diagnostic.config({
--- 	virtual_text = { current_line = true },
--- 	virtual_lines = {
--- 		current_line = true,
--- 	},
--- })

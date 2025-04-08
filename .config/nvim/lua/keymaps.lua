@@ -15,9 +15,5 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- Indent selected text to the left and right
-vim.keymap.set('v', '<', '<gv', { noremap = true, silent = true })
-vim.keymap.set('v', '>', '>gv', { noremap = true, silent = true })
-
--- never lost last buffer after a copy over
-vim.keymap.set("x", "p", [["_dP]])
-
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
