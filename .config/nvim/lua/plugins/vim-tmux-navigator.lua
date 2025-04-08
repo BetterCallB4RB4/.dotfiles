@@ -1,4 +1,5 @@
 return {
-	-- Smooth navigation between tmux and nvim windows
-	{ "christoomey/vim-tmux-navigator" },
+	{
+		"christoomey/vim-tmux-navigator",
+	},
 }

@@ -1,8 +1,8 @@
-return { 
+return {
 	{
 		-- open with :Oil command
-		'stevearc/oil.nvim',
+		"stevearc/oil.nvim",
 		opts = {},
 		dependencies = { { "echasnovski/mini.icons", opts = {} } },
-	}
+	},
 }

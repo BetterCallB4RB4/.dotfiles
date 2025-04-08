@@ -1,4 +1,5 @@
 return {
-	-- ensure that crlf i correcctly handle
-    {"tpope/vim-sleuth"},
+	{
+		"tpope/vim-sleuth",
+	},
 }
