@@ -11,8 +11,6 @@ vim.opt.mouse = "a"
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
 vim.opt.clipboard = "unnamedplus"
 
 -- Enable break indent
@@ -39,16 +37,7 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Sets how neovim will display certain whitespace characters in the editor.
---  See `:help 'list'`
---  and `:help 'listchars'`
-vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-
--- vim.o.tabstop = 4 -- A TAB character looks like 4 spaces
--- vim.o.expandtab = true -- Pressing the TAB key will insert spaces instead of a TAB character
--- vim.o.softtabstop = 4 -- Number of spaces inserted instead of a TAB character
--- vim.o.shiftwidth = 4 -- Number of spaces inserted when indenting
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
@@ -58,8 +47,6 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
 
 -- avoid go to new line for long line
 vim.opt.wrap = true
@@ -70,3 +57,17 @@ vim.opt.list = true
 vim.opt.hlsearch = true
 
 vim.o.laststatus = 3
+
+vim.diagnostic.config({
+	virtual_text = {
+		severity = {
+			max = vim.diagnostic.severity.WARN,
+		},
+	},
+	virtual_lines = {
+		severity = {
+			min = vim.diagnostic.severity.ERROR,
+		},
+		current_line = true,
+	},
+})
