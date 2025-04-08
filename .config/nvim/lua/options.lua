@@ -49,9 +49,9 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- avoid go to new line for long line
-vim.opt.wrap = true
-vim.opt.linebreak = true
-vim.opt.list = true
+vim.opt.wrap = false
+-- vim.opt.linebreak = true
+-- vim.opt.list = true
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -71,3 +71,6 @@ vim.diagnostic.config({
 		current_line = true,
 	},
 })
+
+-- mandatory to silence an obsidian warning
+vim.opt.conceallevel = 1
