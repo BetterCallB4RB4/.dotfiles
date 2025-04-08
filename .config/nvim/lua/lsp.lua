@@ -10,6 +10,7 @@ vim.lsp.config["luals"] = {
 		},
 	},
 }
+
 vim.lsp.config["gopls"] = {
 	cmd = { "gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
@@ -26,18 +27,22 @@ vim.lsp.config["gopls"] = {
 		},
 	},
 }
+
+vim.lsp.config["terraformls"] = {
+	cmd = { "terraform-ls", "serve" }, -- Command to start terraform-ls
+	filetypes = { "terraform", "hcl", "tf" }, -- Filetypes for Terraform
+}
+
+vim.lsp.config["groovyls"] = {
+	cmd = { "groovy-language-server" }, -- Command to start the Groovy LSP server
+	filetypes = { "groovy" }, -- Filetypes to associate with groovy-language-server
+	root_dir = "/home/jd4augbarbad/gitOps/ITIO-shared-libraries/jenkins-library-cd/src",
+}
+
 vim.lsp.enable("luals")
 vim.lsp.enable("gopls")
-
--- enable native autocmplete
--- vim.api.nvim_create_autocmd("LspAttach", {
--- 	callback = function(ev)
--- 		local client = vim.lsp.get_client_by_id(ev.data.client_id)
--- 		if client:supports_method("textDocument/completion") then
--- 			vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
--- 		end
--- 	end,
--- })
+vim.lsp.enable("groovyls")
+vim.lsp.enable("terraformls")
 
 -- virtual text
 -- vim.diagnostic.config({
