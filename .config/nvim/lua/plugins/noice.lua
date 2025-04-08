@@ -2,23 +2,11 @@ return {
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		opts = {
-			lsp = {
-				diagnostics = {
-					enabled = {
-						min_width = 50,
-						max_width = 150,
-					},
-					virtual_text = false,
-				},
-			},
-		},
+		opts = {},
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 		},
-		-- you can enable a preset for easier configuration
 		presets = {
-			-- bottom_search = true, -- use a classic bottom cmdline for search
 			command_palette = true, -- position the cmdline and popupmenu together
 			long_message_to_split = true, -- long messages will be sent to a split
 			inc_rename = false, -- enables an input dialog for inc-rename.nvim
