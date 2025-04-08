@@ -1,20 +1,16 @@
 return {
 	{
 		"folke/snacks.nvim",
-		priority = 1000,
+		priority = 1100,
 		lazy = false,
-		---@type snacks.Config
-
 		opts = {
 			bigfile = { enabled = true },
-
 			dashboard = {
 				preset = {
 					pick = function(cmd, opts)
 						return LazyVim.pick(cmd, opts)()
 					end,
 					header = [[
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⣀⣀⣤⣤⣴⣶⣾⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -40,8 +36,8 @@ return {
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢧⡀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⡀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-]],
+	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+	]],
 					keys = {
 						{
 							icon = " ",
@@ -69,17 +65,13 @@ return {
 					},
 				},
 			},
-
-			indent = { enabled = true },
-			input = { enabled = true },
+			indent = { enabled = true }, -- this show the scope of the function that you are in
+			input = { enabled = true }, -- beautify the input screen
 			notifier = {
-				enabled = true,
+				enabled = true, -- better handling the notificaion
 				timeout = 3000,
 			},
-			quickfile = { enabled = true },
-			scroll = { enabled = true },
-			-- statuscolumn = { enabled = true },
-			words = { enabled = true },
+			quickfile = { enabled = true }, -- open the file first and after load the lazy plugin
 		},
 
 		keys = {
