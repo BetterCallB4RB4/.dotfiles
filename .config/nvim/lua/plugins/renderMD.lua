@@ -4,7 +4,6 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"echasnovski/mini.nvim",
-			"saghen/blink.cmp",
 		},
 		config = function()
 			require("render-markdown").setup({
