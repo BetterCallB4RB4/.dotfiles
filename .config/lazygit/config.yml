@@ -1,0 +1,135 @@
+gui:
+  theme:
+    activeBorderColor:
+      - "#7AA2F7" # blue
+    inactiveBorderColor:
+      - "#414868" # brightBlack
+    titleColor:
+      - "#C0CAF5" # foreground
+    textColor:
+      - "#C0CAF5" # foreground
+    selectedLineBgColor:
+      - "#a31d3f" # selectionBackground (white)
+    selectedLineFgColor:
+      - "#15161E" # black (Increased contrast)
+      - "bold" #adding bold so the selected line stands out
+    selectedRangeBgColor:
+      - "#FFFFFF" # selectionBackground (white)
+    selectedRangeFgColor:
+      - "#15161E" # black (Increased contrast)
+      - "bold" #adding bold so the selected range stands out
+    cherryPickedCommitBgColor:
+      - "#9ECE6A" # green
+    cherryPickedCommitFgColor:
+      - "#1A1B26" # background
+    unstagedChangesColor:
+      - "#E0AF68" # yellow
+    stagedChangesColor:
+      - "#9ECE6A" # green
+    modificationsHistoryBgColor:
+      - "#15161E" # black
+    modificationsHistoryFgColor:
+      - "#C0CAF5" # foreground
+    patchSelectedLineBgColor:
+      - "#FFFFFF" # selectionBackground (white)
+    patchSelectedLineFgColor:
+      - "#15161E" # black (Increased contrast)
+      - "bold" #adding bold so the selected patch line stands out
+    commitBoxBgColor:
+      - "#1A1B26" # background
+    commitBoxFgColor:
+      - "#C0CAF5" # foreground
+    commitBoxBorderColor:
+      - "#7AA2F7" # blue
+    commitBoxHeaderColor:
+      - "#7AA2F7" # blue
+    commandLogBgColor:
+      - "#1A1B26" # background
+    commandLogFgColor:
+      - "#C0CAF5" # foreground
+    commandLogBorderColor:
+      - "#7AA2F7" # blue
+    searchMatchBgColor:
+      - "#FFFFFF" # selectionBackground (white)
+    searchMatchFgColor:
+      - "#15161E" # black (Increased contrast)
+      - "bold" #adding bold so the searched match stands out
+    conflictMarkerColor:
+      - "#F7768E" # red
+    hintTextColor:
+      - "#E0AF68" # yellow
+    suggestionTextColor:
+      - "#7DCFFF" # cyan
+    selectedBlameLineBgColor:
+      - "#FFFFFF" # selectionBackground (white)
+    selectedBlameLineFgColor:
+      - "#15161E" # black (Increased contrast)
+      - "bold" #adding bold so the selected blame line stands out
+    branchColor:
+      - "#7AA2F7" # blue
+    remoteBranchColor:
+      - "#7DCFFF" # cyan
+    tagNameColor:
+      - "#BB9AF7" # purple
+    fileColor:
+      - "#9ECE6A" # green
+    directoryColor:
+      - "#7AA2F7" # blue
+    submoduleColor:
+      - "#E0AF68" # yellow
+    topLevelDirectoryColor:
+      - "#7AA2F7" # blue
+    untrackedFileColor:
+      - "#E0AF68" # yellow
+    modifiedFileColor:
+      - "#E0AF68" # yellow
+    stagedFileColor:
+      - "#9ECE6A" # green
+    mergedFileColor:
+      - "#BB9AF7" # purple
+    conflictFileColor:
+      - "#F7768E" # red
+    progressBgColor:
+      - "#15161E" # black
+    progressFgColor:
+      - "#7AA2F7" # blue
+    pushingColor:
+      - "#7DCFFF" # cyan
+    pullingColor:
+      - "#9ECE6A" # green
+    hasMergeConflictColor:
+      - "#F7768E" # red
+    rebaseModeColor:
+      - "#BB9AF7" # purple
+    bisectingColor:
+      - "#E0AF68" # yellow
+    revertingColor:
+      - "#F7768E" # red
+    applyingColor:
+      - "#9ECE6A" # green
+    recallingStashColor:
+      - "#BB9AF7" # purple
+    popStashColor:
+      - "#9ECE6A" # green
+    droppingStashColor:
+      - "#F7768E" # red
+    applyStashColor:
+      - "#9ECE6A" # green
+    whitespaceErrorColor:
+      - "#F7768E" # red
+    reflogCommitNameColor:
+      - "#7AA2F7" # blue
+    reflogCommitShortShaColor:
+      - "#C0CAF5" # foreground
+    reflogCommitSubjectColor:
+      - "#C0CAF5" # foreground
+    reflogCommitAuthorColor:
+      - "#9ECE6A" # green
+    paneBg:
+      - "#1A1B26" # background
+    paneFg:
+      - "#C0CAF5" # foreground
+    mouseBg:
+      - "#1A1B26" # background
+    mouseFg:
+      - "#C0CAF5" # foreground
