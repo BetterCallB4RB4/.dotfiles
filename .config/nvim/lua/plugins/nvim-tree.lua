@@ -39,10 +39,7 @@ return {
 					},
 				},
 			})
-			
-
 		end,
 		vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<cr>"),
 	},
-
 }

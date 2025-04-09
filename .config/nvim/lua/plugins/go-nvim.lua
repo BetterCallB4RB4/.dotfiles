@@ -2,13 +2,17 @@
 return {
 	{
 		"ray-x/go.nvim",
-		dependencies = { -- optional packages
+		dependencies = {
 			"ray-x/guihua.lua",
-			"neovim/nvim-lspconfig",
 			"nvim-treesitter/nvim-treesitter",
 		},
 		config = function()
-			require("go").setup()
+			require("go").setup({
+				diagnostic = { -- set diagnostic to false to disable vim.diagnostic.config setup,
+					underline = false,
+					virtual_text = false,
+				},
+			})
 		end,
 		event = { "CmdlineEnter" },
 		ft = { "go", "gomod" },
