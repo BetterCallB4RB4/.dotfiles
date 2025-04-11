@@ -118,7 +118,7 @@ you can call the home manager via nix flake
 nix-shell -p home-manager --run "home-manager switch --flake ~/.dotfiles/nix#zen-nix --extra-experimental-features 'nix-command flakes' --impure"
 ```
 
-# Configure the system
+# Configuration
 Now that we have made sure that all the packages are installed correctly, let's get our configurations and send them to the correct programs.
 clone the repository to get the configuration in your home folder (git have to be already installed)
 ```bash
