@@ -41,10 +41,6 @@
 #   mangohud #hud for gaming stats 
 # ];
 
-
-
-
-
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
@@ -128,7 +124,7 @@
      discord
      lutris
      xclip
-
+     podman
      lua-language-server
   ];
 
