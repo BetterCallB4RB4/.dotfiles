@@ -5,7 +5,7 @@ return {
 	-- path = "~/.local/share/nvim/mason",
 	opts = {
 		ensure_installed = {
-			"lua_ls",
+			-- "lua_ls",
 			"gopls",
 			"terraformls",
 			"groovyls",
