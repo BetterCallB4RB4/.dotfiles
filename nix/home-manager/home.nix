@@ -64,6 +64,7 @@
     pkgs.lazydocker
     pkgs.jq
     pkgs.sqlite
+    pkgs.nmap
 
     #go
     pkgs.go
