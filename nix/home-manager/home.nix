@@ -65,6 +65,7 @@
     pkgs.jq
     pkgs.sqlite
     pkgs.nmap
+    pkgs.htop
 
     #go
     pkgs.go
