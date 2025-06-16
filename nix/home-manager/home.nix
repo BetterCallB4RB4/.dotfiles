@@ -66,6 +66,7 @@
     pkgs.sqlite
     pkgs.nmap
     pkgs.htop
+    pkgs.terragrunt
 
     #go
     pkgs.go
