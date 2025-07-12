@@ -127,6 +127,8 @@
      podman
      lua-language-server
      wireguard-tools
+     keepassxc
+     rclone
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

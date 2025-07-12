@@ -68,7 +68,7 @@
     pkgs.htop
     pkgs.unar
     pkgs.qemu
-
+    pkgs.terragrunt
 
     #go
     pkgs.go
