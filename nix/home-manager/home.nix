@@ -66,6 +66,9 @@
     pkgs.sqlite
     pkgs.nmap
     pkgs.htop
+    pkgs.unar
+    pkgs.qemu
+
 
     #go
     pkgs.go
