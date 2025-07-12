@@ -69,6 +69,7 @@
     pkgs.unar
     pkgs.qemu
     pkgs.terragrunt
+    pkgs.bunzip
 
     #go
     pkgs.go
