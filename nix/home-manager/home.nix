@@ -70,6 +70,8 @@
     pkgs.qemu
     pkgs.terragrunt
     pkgs.bzip2
+    pkgs.gnupg
+    pkgs.gnumake
 
     #go
     pkgs.go
