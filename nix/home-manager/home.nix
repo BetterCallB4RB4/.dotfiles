@@ -72,6 +72,7 @@
     pkgs.bzip2
     pkgs.gnupg
     pkgs.gnumake
+    pkgs.open-policy-agent
 
     #go
     pkgs.go
