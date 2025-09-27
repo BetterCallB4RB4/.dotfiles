@@ -74,6 +74,7 @@
     pkgs.gnumake
     pkgs.open-policy-agent
     pkgs.bottles
+    pkgs.rclone
 
 
     #go
