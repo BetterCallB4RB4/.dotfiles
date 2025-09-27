@@ -73,6 +73,8 @@
     pkgs.gnupg
     pkgs.gnumake
     pkgs.open-policy-agent
+    pkgs.bottles
+
 
     #go
     pkgs.go
