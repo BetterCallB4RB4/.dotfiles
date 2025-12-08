@@ -75,6 +75,7 @@
     pkgs.open-policy-agent
     pkgs.bottles
     pkgs.rclone
+    pkgs.feh
 
 
     #go
