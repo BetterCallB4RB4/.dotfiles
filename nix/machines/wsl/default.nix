@@ -208,6 +208,21 @@
     wslConf.automount.root = "/mnt"; # Mount Windows drives to /mnt/c, /mnt/d, etc.
   };
 
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      nerd-fonts.mononoki
+    ];
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = [ "Mononoki Nerd Font" ];
+        sansSerif = [ "Mononoki Nerd Font" ];
+        serif = [ "Mononoki Nerd Font" ];
+      };
+    };
+  };
+
   # --- Standard NixOS Settings ---
   networking.hostName = "nixos-wsl";
   
