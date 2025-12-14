@@ -97,15 +97,18 @@
 { config, lib, pkgs, ... }:
 
 {
-  # --- WSL Specific Configuration ---
+  
+imports = [
+    # include NixOS-WSL modules
+    <nixos-wsl/modules>
+  ];
+
   wsl = {
     enable = true;
-    defaultUser = "nixos"; # The default user is 'nixos'. Changing this requires a restart of the WSL instance.
-    startMenuLaunchers = true; # Adds GUI apps installed in Nix to your Windows Start Menu
 
     # Enable native Docker integration (if you don't use Docker Desktop on Windows)
     docker-native.enable = true;
-    
+
     # Path integration
     # wslConf.interop.appendWindowsPath = true; # Append Windows PATH to NixOS PATH
     wslConf.automount.root = "/mnt"; # Mount Windows drives to /mnt/c, /mnt/d, etc.
