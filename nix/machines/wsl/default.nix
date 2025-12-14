@@ -203,9 +203,6 @@
   wsl = {
     enable = true;
 
-    # Enable native Docker integration (if you don't use Docker Desktop on Windows)
-    docker-native.enable = true;
-
     # Path integration
     # wslConf.interop.appendWindowsPath = true; # Append Windows PATH to NixOS PATH
     wslConf.automount.root = "/mnt"; # Mount Windows drives to /mnt/c, /mnt/d, etc.
