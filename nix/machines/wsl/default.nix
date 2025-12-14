@@ -194,6 +194,12 @@
 { config, lib, pkgs, ... }:
 
 {
+
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
+  nixpkgs.config.allowImpure = true;
+  
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
