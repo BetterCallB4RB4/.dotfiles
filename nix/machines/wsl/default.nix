@@ -94,92 +94,119 @@
 #  };
 #}
 
+#{ config, lib, pkgs, ... }:
+#
+#{
+#  
+#imports = [
+#    # include NixOS-WSL modules
+#    <nixos-wsl/modules>
+#  ];
+#
+#  wsl = {
+#    enable = true;
+#
+#    # Enable native Docker integration (if you don't use Docker Desktop on Windows)
+#    docker-native.enable = true;
+#
+#    # Path integration
+#    # wslConf.interop.appendWindowsPath = true; # Append Windows PATH to NixOS PATH
+#    wslConf.automount.root = "/mnt"; # Mount Windows drives to /mnt/c, /mnt/d, etc.
+#  };
+#
+#  # --- Standard NixOS Settings ---
+#  networking.hostName = "nixos";
+#  
+#  # Enable experimental features (necessary for Flakes)
+#  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+#
+#  # Binary Compatibility (Vital for VS Code Remote & other unpatched binaries)
+#  # programs.nix-ld.enable = true;
+#  
+#  programs.zsh.enable    = true;
+#  users.defaultUserShell = pkgs.zsh;
+#
+#  # System Packages
+#  environment.systemPackages = with pkgs; [
+#    general utils
+#    alacritty
+#    git
+#    xclip
+#    jq
+#    unzip
+#    fzf
+#    zsh
+#    tmux
+#    ripgrep
+#    htop
+#    bzip2
+#    gnupg
+#    gnumake
+#
+#    # go
+#    go
+#    gotools
+#
+#    # rust
+#    rustc
+#    cargo
+#
+#    # zig
+#    zig
+#
+#    # node
+#    nodejs_22
+#
+#    # C
+#    clang-tools
+#    cmake
+#    cppcheck
+#    codespell
+#    conan
+#    doxygen
+#    gtest
+#    lcov
+#    libgcc
+#    vcpkg
+#    vcpkg-tool
+#    gcc
+#
+#    # JAVA
+#    jdk17
+#    groovy
+#  ];
+#
+#
+#  # Allow unfree packages (e.g. VS Code, Chrome, Slack)
+#  nixpkgs.config.allowUnfree = true;
+#
+#  # Do not change this value unless you know what you are doing
+#}
+
+
+# Edit this configuration file to define what should be installed on
+# your system. Help is available in the configuration.nix(5) man page, on
+# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+
+# NixOS-WSL specific options are documented on the NixOS-WSL repository:
+# https://github.com/nix-community/NixOS-WSL
+
 { config, lib, pkgs, ... }:
 
 {
-  
-imports = [
+  imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
   ];
 
-  wsl = {
-    enable = true;
+  wsl.enable = true;
+  wsl.defaultUser = "nixos";
 
-    # Enable native Docker integration (if you don't use Docker Desktop on Windows)
-    docker-native.enable = true;
-
-    # Path integration
-    # wslConf.interop.appendWindowsPath = true; # Append Windows PATH to NixOS PATH
-    wslConf.automount.root = "/mnt"; # Mount Windows drives to /mnt/c, /mnt/d, etc.
-  };
-
-  # --- Standard NixOS Settings ---
-  networking.hostName = "nixos";
-  
-  # Enable experimental features (necessary for Flakes)
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Binary Compatibility (Vital for VS Code Remote & other unpatched binaries)
-  # programs.nix-ld.enable = true;
-  
-  programs.zsh.enable    = true;
-  users.defaultUserShell = pkgs.zsh;
-
-  # System Packages
-  environment.systemPackages = with pkgs; [
-    general utils
-    alacritty
-    git
-    xclip
-    jq
-    unzip
-    fzf
-    zsh
-    tmux
-    ripgrep
-    htop
-    bzip2
-    gnupg
-    gnumake
-
-    # go
-    go
-    gotools
-
-    # rust
-    rustc
-    cargo
-
-    # zig
-    zig
-
-    # node
-    nodejs_22
-
-    # C
-    clang-tools
-    cmake
-    cppcheck
-    codespell
-    conan
-    doxygen
-    gtest
-    lcov
-    libgcc
-    vcpkg
-    vcpkg-tool
-    gcc
-
-    # JAVA
-    jdk17
-    groovy
-  ];
-
-
-  # Allow unfree packages (e.g. VS Code, Chrome, Slack)
-  nixpkgs.config.allowUnfree = true;
-
-  # Do not change this value unless you know what you are doing
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It's perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "25.05"; # Did you read the comment?
 }
-
