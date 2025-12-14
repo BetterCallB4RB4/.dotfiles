@@ -21,8 +21,7 @@
   # Timezone and locale
   time.timeZone = "UTC";
   i18n.defaultLocale = "en_US.UTF-8";
-  time.timeZone = "Europe/Rome";
-
+  
   programs.zsh.enable    = true;
   users.defaultUserShell = pkgs.zsh;
 
