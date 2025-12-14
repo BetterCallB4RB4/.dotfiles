@@ -64,7 +64,7 @@
           system = "x86_64-linux";
           machine = ./machines/wsl;
           username = "augusto";
-          desktop = null; # WSL usually doesn’t need a desktop profile
+          desktop = personal;
         };
       };
 
