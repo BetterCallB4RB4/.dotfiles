@@ -233,7 +233,7 @@
     bzip2
     gnupg
     gnumake
-    nvim
+    neovim
     stow
 
     # go
