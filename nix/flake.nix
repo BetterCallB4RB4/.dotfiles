@@ -60,6 +60,12 @@
           username = "dimi";
           desktop = "hp-laptop";
         };
+        "wsl" = mkSystem {
+          system = "x86_64-linux";
+          machine = ./machines/wsl;
+          username = "augusto";
+          desktop = null; # WSL usually doesn’t need a desktop profile
+        };
       };
 
       homeConfigurations = {
