@@ -63,7 +63,7 @@
         "wsl" = mkSystem {
           system = "x86_64-linux";
           machine = ./machines/wsl;
-          username = "augusto";
+          username = "nixos";
           desktop = "personal";
         };
       };
@@ -71,7 +71,7 @@
       homeConfigurations = {
         "augusto" = mkHome {
           username = "augusto";
-          desktop = "personal"; # Or "personal"
+          desktop = "personal";
         };
       };
     };
