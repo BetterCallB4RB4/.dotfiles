@@ -233,6 +233,8 @@
     bzip2
     gnupg
     gnumake
+    nvim
+    stow
 
     # go
     go
