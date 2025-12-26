@@ -60,12 +60,26 @@
           username = "dimi";
           desktop = "hp-laptop";
         };
+        "wsl" = mkSystem {
+          system = "x86_64-linux";
+          machine = ./machines/wsl;
+          username = "nixos";
+          desktop = "personal";
+        };
       };
 
       homeConfigurations = {
         "augusto" = mkHome {
           username = "augusto";
-          desktop = "personal"; # Or "personal"
+          desktop = "personal";
+        };
+        "dimi" = mkHome {
+          username = "dimi";
+          desktop = "personal";
+        };
+        "nixos" = mkHome {
+          username = "nixos";
+          desktop = "personal";
         };
       };
     };
