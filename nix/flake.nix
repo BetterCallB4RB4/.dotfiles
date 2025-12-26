@@ -73,6 +73,14 @@
           username = "augusto";
           desktop = "personal";
         };
+        "dimi" = mkHome {
+          username = "dimi";
+          desktop = "personal";
+        };
+        "nixos" = mkHome {
+          username = "nixos";
+          desktop = "personal";
+        };
       };
     };
 }
