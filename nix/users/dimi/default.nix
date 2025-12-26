@@ -4,7 +4,7 @@
   users.users.dimi = {
     isNormalUser = true;
     description = "dimi";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
   };
 
   home-manager.users.dimi = import ./home.nix;
