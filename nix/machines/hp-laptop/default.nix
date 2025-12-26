@@ -76,6 +76,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable Docker
+  virtualisation.docker.enable = true;
+
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -124,7 +127,6 @@
      discord
      lutris
      xclip
-     podman
      lua-language-server
      wireguard-tools
      keepassxc
