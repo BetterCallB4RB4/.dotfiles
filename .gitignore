@@ -1,6 +1,6 @@
 *~
 *.lock
-
+*flake.lock
 .config/tmux/plugins
 .config/nvim/lazy-lock.json
 .config/dlv

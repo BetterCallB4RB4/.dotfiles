@@ -13,7 +13,7 @@ normal.family = "mononoki Nerd Font Mono"
 bold.family = "mononoki Nerd Font Mono"
 italic.family = "mononoki Nerd Font Mono"
 bold_italic.family = "mononoki Nerd Font Mono"
-size = 12.0
+size = 10.0
 
 [colors]
   [colors.primary]
