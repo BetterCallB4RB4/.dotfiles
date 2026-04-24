@@ -58,6 +58,8 @@ vim.opt.hlsearch = true
 
 vim.o.laststatus = 3
 
+vim.opt.swapfile = false
+
 vim.diagnostic.config({
 	virtual_text = {
 		severity = {
