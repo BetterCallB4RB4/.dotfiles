@@ -252,6 +252,7 @@
     stow
     gh
     github-copilot-cli
+    zoxide
 
     # go
     go

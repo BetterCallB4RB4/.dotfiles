@@ -88,8 +88,9 @@ zinit light-mode for \
    zdharma-continuum/zinit-annex-patch-dl \
    zdharma-continuum/zinit-annex-rust
 
-# Set up fzf key bindings and fuzzy completion
+# last eval for tools
 eval "$(fzf --zsh)"
 
-#load starship prompt
+eval "$(zoxide init --cmd cd zsh)"
+
 eval "$(starship init zsh)"
