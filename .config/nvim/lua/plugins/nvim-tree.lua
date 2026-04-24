@@ -12,6 +12,8 @@ return {
 				disable_netrw = true,
 				hijack_netrw = true,
 
+
+
 				-- open on the correct directory and keep the correct sync
 				respect_buf_cwd = true,
 				sync_root_with_cwd = true,
@@ -21,10 +23,6 @@ return {
 					relativenumber = true,
 					adaptive_size = true,
 					width = 35,
-				},
-
-				filters = {
-					custom = { ".git" },
 				},
 
 				-- change che selected file when change the editing file
