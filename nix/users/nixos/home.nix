@@ -5,7 +5,7 @@
   home.homeDirectory = "/home/nixos";
 
   home.packages = with pkgs; [
-    neofetch
+    fastfetch
     starship
     stow
     neovim
@@ -16,6 +16,7 @@
     k9s
     lazygit
     tree
+    opencode
 
   ];
 
@@ -26,6 +27,9 @@
         name = "Augusto Barbadoro";
         email = "augusto.barbadoro244@gmail.com";
       };
+    };
+    extraConfig = {
+      credential.helper = "cache --timeout=28800";
     };
   };
 

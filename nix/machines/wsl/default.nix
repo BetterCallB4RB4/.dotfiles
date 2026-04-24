@@ -250,6 +250,8 @@
     gnumake
     neovim
     stow
+    gh
+    github-copilot-cli
 
     # go
     go
@@ -278,6 +280,9 @@
     vcpkg
     vcpkg-tool
     gcc
+
+    #network
+    lsof
 
     # JAVA
     jdk17
