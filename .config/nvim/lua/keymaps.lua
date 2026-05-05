@@ -10,6 +10,12 @@ vim.api.nvim_set_keymap("n", "}", "{", { noremap = true, silent = true })
 -- just disable this function
 vim.keymap.set("n", "Q", "<nop>")
 
+-- Highlight all occurrences of word under cursor without moving
+vim.keymap.set("n", "#", function()
+	vim.fn.setreg("/", "\\<" .. vim.fn.expand("<cword>") .. "\\>")
+	vim.opt.hlsearch = true
+end, { noremap = true, silent = true, desc = "Highlight word without moving" })
+
 -- move highlight test while in visual mode with shift JK
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

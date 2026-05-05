@@ -1,5 +1,5 @@
 -- Keep cursor at least 20 columns away from the left/right edges
-vim.opt.sidescrolloff = 20
+vim.opt.sidescrolloff = 100
 
 -- Make line numbers default
 vim.opt.number = true
