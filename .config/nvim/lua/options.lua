@@ -1,3 +1,6 @@
+-- Keep cursor at least 20 columns away from the left/right edges
+vim.opt.sidescrolloff = 20
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
