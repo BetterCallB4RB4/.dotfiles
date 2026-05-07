@@ -73,6 +73,8 @@
     gh
     github-copilot-cli
     zoxide
+    checkov
+    terraform
 
     # go
     go
