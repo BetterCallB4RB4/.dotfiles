@@ -17,6 +17,7 @@
     lazygit
     tree
     opencode
+    azure-cli
 
   ];
 

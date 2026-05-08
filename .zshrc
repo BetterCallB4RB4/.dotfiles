@@ -39,6 +39,7 @@ bindkey "^b" backward-word
 bindkey "^w" forward-word
 bindkey '^p' backward-char
 bindkey '^n' forward-char
+bindkey -r '^Z'
 
 #work around for WSL with windows terminal
 bindkey "^[[3~" delete-char
@@ -88,6 +89,29 @@ zinit light-mode for \
    zdharma-continuum/zinit-annex-bin-gem-node \
    zdharma-continuum/zinit-annex-patch-dl \
    zdharma-continuum/zinit-annex-rust
+
+
+#### TEMP ####
+
+heimdall() {
+    local TMP_SCRIPT="$HOME/generated_script.sh"
+    local TARGET_DIR="/home/nixos/gitOps/github.com/BetterCallB4RB4/heimdall"
+    
+    : > "$TMP_SCRIPT"
+
+    # Pushd moves you to the dir quietly
+    pushd "$TARGET_DIR" > /dev/null
+    go run . "$@"
+    popd > /dev/null # Moves you back to where you were
+    
+    if [[ -s "$TMP_SCRIPT" ]]; then
+        source "$TMP_SCRIPT"
+        rm "$TMP_SCRIPT"
+    fi
+}
+
+##############
+
 
 # last eval for tools
 eval "$(fzf --zsh)"
