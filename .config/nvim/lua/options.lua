@@ -14,7 +14,20 @@ vim.opt.mouse = "a"
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
+-- In WSL, force win32yank.exe so yanks reach the Windows clipboard.
 vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+  name = "win32yank-wsl",
+  copy = {
+    ["+"] = { "win32yank.exe", "-i", "--crlf" },
+    ["*"] = { "win32yank.exe", "-i", "--crlf" },
+  },
+  paste = {
+    ["+"] = { "win32yank.exe", "-o", "--lf" },
+    ["*"] = { "win32yank.exe", "-o", "--lf" },
+  },
+  cache_enabled = 0,
+}
 
 -- Enable break indent
 vim.opt.breakindent = true
