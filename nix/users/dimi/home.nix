@@ -26,6 +26,9 @@
         email = "augusto.barbadoro244@gmail.com";
       };
     };
+    extraConfig = {
+      pull.rebase = false;
+    };
   };
 
   # The home.packages option allows you to install Nix packages into your

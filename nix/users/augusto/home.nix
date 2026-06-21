@@ -27,6 +27,9 @@
         email = "augusto.barbadoro244@gmail.com";
       };
     };
+    extraConfig = {
+      pull.rebase = false;
+    };
   };
 
   home.stateVersion = "23.11";

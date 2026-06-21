@@ -55,6 +55,7 @@
   # System Packages
   environment.systemPackages = with pkgs; [
     #general utils
+    terragrunt
     alacritty
     git
     xclip
@@ -75,6 +76,11 @@
     zoxide
     checkov
     terraform
+    yazi
+    kubelogin
+    openssl
+    oras
+    python3
 
     # go
     go

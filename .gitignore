@@ -7,3 +7,4 @@
 .config/go
 .config/environment.d
 .config/nix
+.config/heimdall

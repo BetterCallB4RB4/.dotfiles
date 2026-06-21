@@ -81,6 +81,7 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 export NIXPKGS_ALLOW_UNFREE=1
 export JAVA_HOME=$(readlink -f ~/.nix-profile/bin/java | sed 's:/bin/java::')
 export PATH="$HOME/.local/bin:$PATH"
+export EDITOR="nvim"
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)

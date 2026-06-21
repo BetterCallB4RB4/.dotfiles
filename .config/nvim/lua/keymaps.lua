@@ -25,4 +25,8 @@ vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
 vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
 -- never lost last buffer after a copy over
-vim.keymap.set("x", "p", [["_dP]])
+-- Since Neovim 0.10, visual P pastes without overwriting the register natively
+vim.keymap.set("x", "p", "P")
+
+-- Exit terminal mode with Esc
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true, desc = "Exit terminal mode" })

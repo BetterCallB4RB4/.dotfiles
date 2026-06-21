@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/gitOps -mindepth 1 -maxdepth 4 -type d | fzf)
+    selected=$(find ~/gitOps ~/.dotfiles -mindepth 1 -maxdepth 4 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

@@ -31,6 +31,7 @@
     };
     extraConfig = {
       credential.helper = "cache --timeout=28800";
+      pull.rebase = false;
     };
   };
 
