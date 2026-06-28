@@ -81,6 +81,8 @@
     openssl
     oras
     python3
+    kmod
+    arduino-cli
 
     # go
     go
@@ -119,6 +121,11 @@
     groovy
   ];
 
+  boot.kernelModules = [ 
+    "vhci-hcd" 
+    "cdc-acm" 
+    "usbserial" 
+  ];
   # Allow unfree packages (e.g. VS Code, Chrome, Slack)
   nixpkgs.config.allowUnfree = true;
 
