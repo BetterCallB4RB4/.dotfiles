@@ -26,6 +26,11 @@
 
   };
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true; # Makes `docker` CLI point to podman
+  };
+
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
@@ -80,11 +85,15 @@
     kubelogin
     openssl
     oras
-    python3
+    swaks
+    podman-compose
+    kompose
+    worktrunk
 
     # go
     go
     gotools
+    goreleaser
 
     # rust
     rustc
