@@ -5,27 +5,44 @@
     ../../modules/services/ssh.nix
   ];
 
-
   nixpkgs.config.allowUnfree = true;
 
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sda"; # Replace with your boot disk, e.g., "/dev/vda" for VMs
+  boot.loader.grub.device = "/dev/sda"; # Sostituisci con il tuo disco di boot, es. "/dev/vda" per VM
 
   networking.hostName = "my-laptop";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Rome";
 
-  # services.xserver.enable = true;
-  # services.displayManager.gdm.enable = true;
-  # services.desktopManager.gnome.enable = true;
+  # --- CONFIGURAZIONE DESKTOP MINIMALE (X11 + i3) ---
+  services.xserver = {
+    enable = true;
+    
+    # Imposta il layout di tastiera italiano (consigliato visto il fuso orario)
+    xkb.layout = "it";
+    
+    # Display Manager leggero (molto meglio di GDM per vecchi PC)
+    displayManager.lightdm.enable = true;
+
+    # Window Manager i3
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [
+        dmenu      # Il launcher minimale per avviare le app (Win+D di default)
+        i3status   # La barra di stato di default per le informazioni di sistema
+        i3lock     # Per bloccare lo schermo
+        i3blocks   # Un'alternativa più personalizzabile a i3status
+      ];
+    };
+  };
 
   programs.zsh.enable    = true;
   users.defaultUserShell = pkgs.zsh;
 
   environment.systemPackages = with pkgs; [
-    # general utils
+    # utils generali
     alacritty
     git
     xclip
@@ -39,6 +56,15 @@
     bzip2
     gnupg
     gnumake
+
+    # --- UTILITY AGGIUNTIVE PER I3 E PORTATILI ---
+    networkmanagerapplet # Applet di rete (nm-applet) per la tray icon nella barra
+    pavucontrol          # Gestione grafica dell'audio (indispensabile)
+    brightnessctl        # Controllo della luminosità dello schermo (fondamentale sui laptop)
+    feh                  # Visualizzatore d'immagini leggerissimo e gestore sfondi desktop
+    dunst                # Demone leggero per gestire le notifiche a comparsa
+    scrot                # Tool da riga di comando per fare screenshot
+    # ---------------------------------------------
 
     # go
     go
@@ -73,7 +99,7 @@
     groovy
   ];
 
-   # Font configuration
+  # Configurazione Font
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
@@ -89,12 +115,5 @@
     };
   };
 
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "23.11"; 
 }

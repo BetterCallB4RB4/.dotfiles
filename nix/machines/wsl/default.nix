@@ -128,6 +128,11 @@
     groovy
   ];
 
+  boot.kernelModules = [ 
+    "vhci-hcd" 
+    "cdc-acm" 
+    "usbserial" 
+  ];
   # Allow unfree packages (e.g. VS Code, Chrome, Slack)
   nixpkgs.config.allowUnfree = true;
 
