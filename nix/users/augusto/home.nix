@@ -5,7 +5,6 @@
   home.homeDirectory = "/home/augusto";
 
   home.packages = with pkgs; [
-    neofetch
     starship
     stow
     neovim

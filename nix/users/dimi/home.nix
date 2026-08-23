@@ -55,7 +55,6 @@
     # '')
     
     #tool
-    pkgs.neofetch
     pkgs.starship
     pkgs.stow
     pkgs.neovim
