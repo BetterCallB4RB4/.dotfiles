@@ -93,23 +93,36 @@ zinit light-mode for \
 
 
 #### TEMP ####
+# heimdall() {
+#     local TMP_SCRIPT="$HOME/generated_script.sh"
+#     local TARGET_DIR="/home/nixos/gitOps/github.com/BetterCallB4RB4/heimdall"
+#
+#     : > "$TMP_SCRIPT"
+#
+#     # Pushd moves you to the dir quietly
+#     pushd "$TARGET_DIR" > /dev/null
+#     go run . "$@"
+#     popd > /dev/null # Moves you back to where you were
+#
+#     if [[ -s "$TMP_SCRIPT" ]]; then
+#         source "$TMP_SCRIPT"
+#         rm "$TMP_SCRIPT"
+#     fi
+# }
 
 heimdall() {
-    local TMP_SCRIPT="$HOME/generated_script.sh"
-    local TARGET_DIR="/home/nixos/gitOps/github.com/BetterCallB4RB4/heimdall"
-    
-    : > "$TMP_SCRIPT"
+    local TMP_SCRIPT
+    TMP_SCRIPT="$(mktemp /tmp/heimdall_script.XXXXXX)"
 
-    # Pushd moves you to the dir quietly
-    pushd "$TARGET_DIR" > /dev/null
-    go run . "$@"
-    popd > /dev/null # Moves you back to where you were
-    
+    HEIMDALL_SCRIPT="$TMP_SCRIPT" command heimdall "$@"
+
     if [[ -s "$TMP_SCRIPT" ]]; then
         source "$TMP_SCRIPT"
-        rm "$TMP_SCRIPT"
     fi
+    rm -f "$TMP_SCRIPT"
 }
+
+
 
 ##############
 
