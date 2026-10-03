@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  
   # include NixOS-WSL modules this will require --impure in the nixosrebuild switch command
   imports = [
     <nixos-wsl/modules>
@@ -23,7 +22,6 @@
       interop.enabled = true;
       interop.appendWindowsPath = true;
     };
-
   };
 
   fonts = {
@@ -52,9 +50,18 @@
 
   services.dbus.enable = true;
 
+  # --- Podman Configuration ---
+  virtualisation.podman = {
+    enable = true;
+    # Create a `docker` alias for podman, allowing tools that expect docker to work
+    dockerCompat = true;
+    # Required for containers under podman-compose to be able to talk to each other
+    defaultNetwork.settings.dns_enabled = true;
+  };
+
   # System Packages
   environment.systemPackages = with pkgs; [
-    #general utils
+    # General utils
     terragrunt
     alacritty
     git
@@ -84,21 +91,21 @@
     kmod
     arduino-cli
 
-    # go
+    # Go
     go
     gotools
 
-    # rust
+    # Rust
     rustc
     cargo
 
-    # zig
+    # Zig
     zig
 
-    # node
+    # Node
     nodejs_22
 
-    # C
+    # C / C++
     clang-tools
     cmake
     cppcheck
@@ -112,13 +119,16 @@
     vcpkg-tool
     gcc
 
-    #network
+    # Network
     lsof
     bind
 
-    # JAVA
+    # Java
     jdk17
     groovy
+
+    # Containers
+    podman-compose # Added to parse and run your compose file
   ];
 
   boot.kernelModules = [ 
@@ -126,6 +136,7 @@
     "cdc-acm" 
     "usbserial" 
   ];
+  
   # Allow unfree packages (e.g. VS Code, Chrome, Slack)
   nixpkgs.config.allowUnfree = true;
 
