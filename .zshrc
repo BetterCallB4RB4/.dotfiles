@@ -75,10 +75,9 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias daddy='sudo'
 alias python='python3'
+alias docker='podman'
 
 # Custom ENV Var
-export PATH="$(go env GOPATH)/bin:$PATH"
-export NIXPKGS_ALLOW_UNFREE=1
 export JAVA_HOME=$(readlink -f ~/.nix-profile/bin/java | sed 's:/bin/java::')
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
@@ -109,29 +108,24 @@ zinit light-mode for \
 #         rm "$TMP_SCRIPT"
 #     fi
 # }
-
-heimdall() {
-    local TMP_SCRIPT
-    TMP_SCRIPT="$(mktemp /tmp/heimdall_script.XXXXXX)"
-
-    HEIMDALL_SCRIPT="$TMP_SCRIPT" command heimdall "$@"
-
-    if [[ -s "$TMP_SCRIPT" ]]; then
-        source "$TMP_SCRIPT"
-    fi
-    rm -f "$TMP_SCRIPT"
-}
-
-
+#
+# heimdall() {
+#     local TMP_SCRIPT
+#     TMP_SCRIPT="$(mktemp /tmp/heimdall_script.XXXXXX)"
+#
+#     HEIMDALL_SCRIPT="$TMP_SCRIPT" command heimdall "$@"
+#
+#     if [[ -s "$TMP_SCRIPT" ]]; then
+#         source "$TMP_SCRIPT"
+#     fi
+#     rm -f "$TMP_SCRIPT"
+# }
 
 ##############
 
-
 # last eval for tools
+eval "$(mise activate zsh)"
 eval "$(fzf --zsh)"
-
 eval "$(zoxide init --cmd cd zsh)"
-
 eval "$(starship init zsh)"
 
-eval "$(~/.local/bin/mise activate zsh)"
