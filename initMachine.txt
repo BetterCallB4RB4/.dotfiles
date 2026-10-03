@@ -8,6 +8,23 @@ ssh-keygen -t ed25519 -C "augusto.barbadoro244@gmail.com"
 clona il repo git@github.com:BetterCallB4RB4/.dotfiles.git
 
 
+
+installa 
+sudo apt install stow build-essentisls podman zsh 
+
+installa mise con
+
+curl https://mise.run | sh
+
+cd .dotfiles
+stow .
+
+mise install
+
+which zsh | sudo tee -a /etc/shells
+chsh -s $(which zsh)
+
+
 install i plug in di herdr per nvim
 herdr plugin install aimdevlee/herdr-nvim-nav
 
