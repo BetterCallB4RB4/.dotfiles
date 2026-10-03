@@ -1,0 +1,50 @@
+[tools]
+# Linguaggi di programmazione e runtime
+python = "latest"
+node = "22"
+go = "latest"
+java = "temurin-17"
+rust = "latest"
+zig = "latest"
+groovy = "latest"
+
+# Infrastruttura come Codice (IaC) e Cloud
+terraform = "latest"
+opentofu = "latest"
+terragrunt = "latest"
+awscli = "latest"
+"azure-cli" = "latest"
+checkov = "latest"
+
+# Kubernetes & Container
+kubectl = "latest"
+helm = "latest"
+k9s = "latest"
+kubelogin = "latest"
+kompose = "latest"
+podman = "latest"
+podman-compose = "latest"
+oras = "latest"
+
+# Terminale, Editor & Utility
+neovim = "latest"       # nvim
+tmux = "latest"
+starship = "latest"
+zoxide = "latest"       # zeoxizide
+fzf = "latest"
+jq = "latest"
+ripgrep = "latest"
+yazi = "latest"
+gh = "latest"
+github-copilot-cli = "latest"
+stow = "latest"
+alacritty = "latest"
+
+# Strumenti di Build ed Ecosistema (C/C++, Go, ecc.)
+cmake = "latest"
+cppcheck = "latest"
+codespell = "latest"
+conan = "latest"
+doxygen = "latest"
+vcpkg = "latest"
+goreleaser = "latest"
