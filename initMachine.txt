@@ -1,0 +1,46 @@
+configura git 
+git config --global user.name "Augusto Barbadoro"
+git config --global user.email "augusto.barbadoro244@gmail.com"
+
+configura la chiave ssh per github
+ssh-keygen -t ed25519 -C "augusto.barbadoro244@gmail.com"
+
+clona il repo git@github.com:BetterCallB4RB4/.dotfiles.git
+
+
+install i plug in di herdr per nvim
+herdr plugin install aimdevlee/herdr-nvim-nav
+
+
+installa la clipboard in caso su WSL
+
+curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.1.1/win32yank-x64.zip
+unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+chmod +x /tmp/win32yank.exe
+sudo mv /tmp/win32yank.exe /usr/local/bin/
+
+
+palette rosepine per terminale di windows T_T
+{
+  "name": "Rosé Pine",
+  "background": "#191724",
+  "foreground": "#e0def4",
+  "selectionBackground": "#403d52",
+  "cursorColor": "#524f67",
+  "black": "#26233a",
+  "red": "#eb6f92",
+  "green": "#31748f",
+  "yellow": "#f6c177",
+  "blue": "#9ccfd8",
+  "purple": "#c4a7e7",
+  "cyan": "#ebbcba",
+  "white": "#e0def4",
+  "brightBlack": "#6e6a86",
+  "brightRed": "#eb6f92",
+  "brightGreen": "#31748f",
+  "brightYellow": "#f6c177",
+  "brightBlue": "#9ccfd8",
+  "brightPurple": "#c4a7e7",
+  "brightCyan": "#ebbcba",
+  "brightWhite": "#e0def4"
+}
