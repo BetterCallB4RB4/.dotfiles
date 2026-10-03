@@ -8,6 +8,10 @@ rust = "latest"
 zig = "latest"
 groovy = "latest"
 
+# Witch cargo
+"cargo:worktrunk" = "latest"
+"cargo:opencode"  = "latest"
+
 # Infrastruttura come Codice (IaC) e Cloud
 terraform = "latest"
 opentofu = "latest"
