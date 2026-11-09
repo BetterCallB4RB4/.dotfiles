@@ -1,0 +1,56 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+space"
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'
+previous_tab = ["alt+h"]
+next_tab     = ["alt+l"]
+previous_workspace = ["alt+k"]
+next_workspace     = ["alt+j"]
+toggle_sidebar = "prefix+a"
+new_workspace = "prefix+shift+c"
+next_agent = "alt+n"
+previous_agent = "alt+p"
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+
+
+[[keys.command]]
+key = "ctrl+h"
+type = "plugin_action"
+command = "herdr-nvim-nav.left"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "plugin_action"
+command = "herdr-nvim-nav.down"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "plugin_action"
+command = "herdr-nvim-nav.up"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "plugin_action"
+command = "herdr-nvim-nav.right"
+
+[ui]
+mouse_capture = true
+sidebar_start_collapsed = true
+status_indicators = "dots"
+pane_gaps = false
+
+[ui.sidebar.agents]
+row_gap = 0
+
+[theme]
+name = "rose-pine"
+auto_switch = false
+
+[ui.sound]
+enabled = true
+
+[ui.toast]
+delivery = "herdr"

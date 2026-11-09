@@ -1,0 +1,12 @@
+show=drun
+prompt=Search
+width=640
+height=420
+location=center
+insensitive=true
+allow_images=true
+image_size=24
+hide_scroll=true
+matching=fuzzy
+term=ghostty
+gtk_dark=true
