@@ -49,9 +49,9 @@ input type:pointer {
 }
 
 ### Layout
-gaps inner 10
-gaps outer 10
-gaps top 5
+gaps inner 7
+gaps outer 7
+gaps top 3
 smart_gaps off
 smart_borders on
 hide_edge_borders --i3 none
@@ -74,6 +74,8 @@ client.placeholder      $surface $base    $text    $surface $surface
 client.background       $base
 
 ### Autostart
+# Restore the wallpaper last selected in waypaper (keeps swaybg running).
+exec --no-startup-id waypaper --restore
 exec systemctl --user set-environment XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment DISPLAY SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway WAYLAND_DISPLAY
