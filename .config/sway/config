@@ -49,9 +49,9 @@ input type:pointer {
 }
 
 ### Layout
-gaps inner 6
+gaps inner 12
 gaps outer 10
-gaps top 20
+gaps top 30
 smart_gaps off
 smart_borders on
 hide_edge_borders --i3 none

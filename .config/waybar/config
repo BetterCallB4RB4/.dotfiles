@@ -11,6 +11,10 @@
     "clock"
   ],
   "modules-right": [
+    "cpu",
+    "custom/gpu",
+    "temperature#cpu",
+    "temperature#gpu",
     "pulseaudio",
     "network",
     "battery",
@@ -29,6 +33,32 @@
     "format": "{:%H:%M}",
     "tooltip-format": "{:%A %d %B %Y}",
     "interval": 60
+  },
+  "cpu": {
+    "interval": 2,
+    "format": "CPU {usage}%",
+    "tooltip": false
+  },
+  "custom/gpu": {
+    "exec": "cat /sys/class/drm/card*/device/gpu_busy_percent 2>/dev/null | head -n1",
+    "interval": 2,
+    "format": "GPU {text}%",
+    "tooltip": false,
+    "hide-empty-text": true
+  },
+  "temperature#cpu": {
+    "hwmon-name": "k10temp",
+    "input-filename": "temp1_input",
+    "interval": 2,
+    "format": "CPU {temperatureC}°C",
+    "tooltip": false
+  },
+  "temperature#gpu": {
+    "hwmon-name": "amdgpu",
+    "input-filename": "temp1_input",
+    "interval": 2,
+    "format": "GPU {temperatureC}°C",
+    "tooltip": false
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
