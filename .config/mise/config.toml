@@ -12,9 +12,6 @@ lazygit = "latest"
 opencode = "latest"
 herdr = "latest"
 
-# Witch cargo
-"cargo:worktrunk" = "latest"
-
 # Infrastruttura come Codice (IaC) e Cloud
 terraform = "latest"
 opentofu = "latest"

@@ -1,0 +1,96 @@
+@define-color base    #191724;
+@define-color surface #1f1d2e;
+@define-color overlay #26233a;
+@define-color muted   #6e6a86;
+@define-color subtle  #908caa;
+@define-color text    #e0def4;
+@define-color love    #eb6f92;
+@define-color gold    #f6c177;
+@define-color rose    #ebbcba;
+@define-color pine    #31748f;
+@define-color foam    #9ccfd8;
+@define-color iris    #c4a7e7;
+
+* {
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 13px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @text;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#workspaces {
+    margin-left: 8px;
+}
+
+#workspaces button {
+    padding: 0 9px;
+    margin: 5px 2px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: @subtle;
+}
+
+#workspaces button:hover {
+    background-color: @overlay;
+    color: @text;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+    background-color: @love;
+    color: @base;
+}
+
+#workspaces button.urgent {
+    background-color: @gold;
+    color: @base;
+}
+
+#mode,
+#clock,
+#cpu,
+#custom-gpu,
+#temperature.cpu,
+#temperature.gpu,
+#pulseaudio,
+#network,
+#battery {
+    padding: 0 10px;
+    margin: 5px 3px;
+    border-radius: 8px;
+    background-color: @surface;
+    color: @text;
+}
+
+#clock {
+    background-color: @overlay;
+    font-weight: 600;
+}
+
+#mode {
+    color: @gold;
+}
+
+#battery.warning {
+    color: @gold;
+}
+
+#battery.critical {
+    color: @love;
+}
+
+#tray {
+    margin: 5px 8px 5px 3px;
+    padding: 0 4px;
+    background-color: transparent;
+}
