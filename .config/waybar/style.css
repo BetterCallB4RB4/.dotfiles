@@ -20,7 +20,7 @@
 }
 
 window#waybar {
-    background-color: @base;
+    background-color: transparent;
     color: @text;
 }
 
