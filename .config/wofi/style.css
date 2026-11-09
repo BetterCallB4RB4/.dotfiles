@@ -1,0 +1,76 @@
+@define-color base    #191724;
+@define-color surface #1f1d2e;
+@define-color overlay #26233a;
+@define-color muted   #6e6a86;
+@define-color subtle  #908caa;
+@define-color text    #e0def4;
+@define-color love    #eb6f92;
+@define-color gold    #f6c177;
+@define-color rose    #ebbcba;
+@define-color pine    #31748f;
+@define-color foam    #9ccfd8;
+@define-color iris    #c4a7e7;
+
+* {
+    font-family: "JetBrainsMono Nerd Font Mono";
+    font-size: 13px;
+}
+
+window {
+    background-color: transparent;
+    border-radius: 16px;
+}
+
+#outer-box {
+    margin: 0;
+    padding: 12px;
+    border-radius: 16px;
+    background-color: @base;
+    border: 1px solid @overlay;
+}
+
+#input {
+    margin: 2px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid @overlay;
+    background-color: @surface;
+    color: @text;
+    caret-color: @rose;
+}
+
+#input:focus {
+    border-color: @rose;
+}
+
+#scroll {
+    margin-top: 8px;
+}
+
+#inner-box {
+    margin: 0;
+}
+
+#entry {
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: @text;
+}
+
+#entry image {
+    margin-right: 8px;
+}
+
+#entry:selected {
+    background-color: @rose;
+    color: @base;
+}
+
+#text {
+    color: @text;
+}
+
+#text:selected,
+#entry:selected #text {
+    color: @base;
+}
