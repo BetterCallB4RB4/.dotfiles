@@ -47,12 +47,12 @@ window#waybar.hidden {
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: @rose;
+    background-color: @love;
     color: @base;
 }
 
 #workspaces button.urgent {
-    background-color: @love;
+    background-color: @gold;
     color: @base;
 }
 
