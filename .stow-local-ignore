@@ -2,6 +2,7 @@ README.md
 LICENSE.md
 .gitignore
 .git
+.stowrc
 zshrc.org
 nix
 initMachine.txt
