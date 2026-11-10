@@ -269,6 +269,18 @@ between herdr panes and Neovim splits:
 herdr plugin install aimdevlee/herdr-nvim-nav
 ```
 
+Herdr plugins cannot be declared in `~/.config/herdr/config.toml`: installs are
+recorded in a user-global registry, so a fresh machine has to run the command
+once. `config.toml` only wires the plugin's actions to keys (via
+`type = "plugin_action"`).
+
+[`bootstrap.sh`](bootstrap.sh) does this step for you after `mise install`:
+
+```bash
+./bootstrap.sh
+herdr plugin list
+```
+
 ### Clipboard on WSL
 
 Neovim and tmux need a bridge to the Windows clipboard. Install `win32yank`:
@@ -304,6 +316,7 @@ Verify with `win32yank.exe -o` or by yanking text in Neovim.
 │   └── starship.toml      # Prompt
 ├── .zshrc                 # Shell: zinit, aliases, mise activation
 ├── .stow-local-ignore     # Files Stow must not link
+├── bootstrap.sh           # Post-install: herdr plugin(s)
 ├── initMachine.txt        # Original setup notes
 ├── LICENSE.md
 └── README.md

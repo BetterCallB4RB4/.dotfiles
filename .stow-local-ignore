@@ -3,6 +3,7 @@ LICENSE.md
 .gitignore
 .git
 .stowrc
+bootstrap.sh
 zshrc.org
 nix
 initMachine.txt
