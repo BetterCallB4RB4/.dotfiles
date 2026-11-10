@@ -41,7 +41,7 @@ mouse_capture = true
 sidebar_start_collapsed = true
 status_indicators = "dots"
 pane_gaps = false
-pane_borders = "off"
+pane_borders = "auto"
 pane_outer_borders = false
 
 [ui.sidebar.agents]
