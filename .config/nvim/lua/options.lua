@@ -1,11 +1,9 @@
 -- Keep cursor at least 20 columns away from the left/right edges
 vim.opt.sidescrolloff = 100
 
--- Make line numbers default
+-- Make line numbers default (classic absolute numbering)
 vim.opt.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"

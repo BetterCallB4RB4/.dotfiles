@@ -20,7 +20,7 @@ return {
 
 				view = {
 					number = true,
-					relativenumber = true,
+					relativenumber = false,
 					adaptive_size = true,
 					width = 35,
 				},

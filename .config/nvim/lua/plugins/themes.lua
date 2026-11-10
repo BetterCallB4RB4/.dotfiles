@@ -50,9 +50,7 @@ return {
 			vim.cmd.colorscheme("rose-pine")
 
 			-- custom highlights (applied after the colorscheme is set)
-			vim.api.nvim_set_hl(0, "LineNrBelow", { fg = "#b4f9f8" })
-			vim.api.nvim_set_hl(0, "LineNrAbove", { fg = "#b4f9f8" })
-			vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#b4f9f8" })
+			vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#403d52" })
 		end,
 	},
 
